@@ -1,0 +1,50 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 25px;
+}
+
+/* Track */
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scrollSlider 25s linear infinite;
+}
+
+/* Pause animation on hover */
+.slider:hover .slider-track {
+  animation-play-state: paused;
+}
+
+/* Slides */
+.slide {
+  flex: 0 0 auto;
+  margin-right: 75px;
+}
+
+/* Image Styling */
+.slide img {
+  width: auto;
+  height: 50px;
+  
+  transition: filter 0.4s ease, transform 0.4s ease;
+  
+}
+
+/* Color on Hover */
+.slide img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Infinite Scroll Animation */
+@keyframes scrollSlider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
