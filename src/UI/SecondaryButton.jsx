@@ -1,12 +1,13 @@
 export function SecondaryButton({
   text = "Learn More",
   className = "",
+  padding = "px-[25px] py-[15px]",
 }) {
   return (
     <button
       className={`
         group relative overflow-hidden rounded-full
-        px-[25px] py-[15px]
+        ${padding}
         font-semibold
 
         text-[#171E4B]

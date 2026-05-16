@@ -7,6 +7,12 @@ import { SecondaryButton } from '../UI/SecondaryButton'
 import ContactForm from '../components/ContactForm'
 import ImageCarousel from '../components/ImageCarousel';
 import LogosMarquee from '../components/LogosMarquee';
+import ServiceCard from '../UI/ServiceCard';
+import TabsSection from '../components/TabsSection';
+import SplitText from '../UI/SplitText';
+import TestimonialSection from '../components/TestimonialSection';
+import FAQSection from '../components/FAQSection';
+import Footer from '../components/Footer';
 
 // Animation Variants
 const fadeInUp = {
@@ -35,6 +41,58 @@ const listItems = [
     "With our coaching, you can perfect your manuscript.",
     "From beginning to end, receive first-rate service.",
   ];
+
+  const services = [
+  {
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    title: "Publishing & Distribution",
+    description: "Simplify the publishing process and make your book available through trusted platforms for global and local reach.",
+    buttonText: "Explore Service",
+    link: "/web-design",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    title: "Editing & Proofreading",
+    description: "Ensure clarity, flow, and accuracy with professional editing and proofreading that enhance readability and polish your final draft.",
+    buttonText: "Explore Service",
+    link: "/seo",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    title: "Cover Design & Illustrations",
+    description: "Get visually striking covers and illustrations crafted to complement your genre, tone, and audience appeal.",
+    buttonText: "Explore Service",
+    link: "/branding",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    title: "Ghostwriting & Manuscript",
+    description: "Collaborate with skilled writers who can help you shape, refine, or complete your manuscript while you have the creative control.",
+    buttonText: "Explore Service",
+    link: "/ui-ux",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    title: "Marketing & PR Campaigns",
+    description: "Build awareness through strategic campaigns that help connect your book with its ideal readers across multiple channels.",
+    buttonText: "Explore Service",
+    link: "/development",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    title: "Audio Book Publsihing",
+    description: "Turn your story into immersive audio formats that engage listeners and expand your audience across popular platforms.",
+    buttonText: "Explore Service",
+    link: "/marketing",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    title: "Time Square Event",
+    description: "Showcase your book in Times Square with bold promotions that create buzz and attract a wider audience fast.",
+    buttonText: "Explore Service",
+    link: "/content-writing",
+  },
+];
 
   const birdVariants = {
     hidden: { opacity: 0, x: 100 },
@@ -72,6 +130,15 @@ const listItems = [
     },
   };
 
+  const itemVariants2 = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.5, ease: "easeOut" } 
+    },
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -85,9 +152,18 @@ const listItems = [
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-       <section className="relative w-full min-h-[100vh] overflow-hidden bg-black">
+  <div>
+    <Header />
+    {/* Hero */}
+    <section className="relative w-full min-h-[100vh] bg-black">
+        <motion.img 
+        src='images/bird1.webp' 
+        className='z-50 absolute right-0 -bottom-22 w-32 md:w-40'
+        variants={birdVariants}
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      />
       {/* Background Video - Fade in slowly */}
       <motion.video
         initial={{ opacity: 0 }}
@@ -119,6 +195,7 @@ export default function Home() {
           >
             Let Your Story Reach the Peak It’s Destined To 
           </motion.h1>
+          
 
           <motion.p 
             variants={fadeInUp}
@@ -173,19 +250,11 @@ export default function Home() {
         </motion.div>
 
       </div>
-       </section>
-
-      <section className="relative w-full bg-white ">
+    </section>
+    {/* About*/}
+    <section className="relative w-full bg-white overflow-hidden ">
       {/* Animated Bird Image */}
-      <motion.img 
-        src='images/bird1.webp' 
-        className='z-50 absolute right-0 -top-10 w-32 md:w-40'
-        variants={birdVariants}
-        initial="hidden"
-        whileInView="visible"
-        animate="floating"
-        viewport={{ once: true, amount: 0.3 }}
-      />
+      
 
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-16 items-center justify-between px-4 md:px-8 py-16 relative">
         
@@ -210,7 +279,7 @@ export default function Home() {
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm"
+            className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm"
           >
             Let Your Story Reach the Peak It’s Destined To 
           </motion.h2>
@@ -250,10 +319,9 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </div>
-      </section>
-
-
-      <motion.div 
+    </section>
+    {/* Logo Marquee */}
+    <motion.div 
           className='relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)] '
           variants={staggerContainer}
           initial="hidden"
@@ -261,8 +329,329 @@ export default function Home() {
           viewport={{ once: true }}
         >
       <LogosMarquee speed={20} height={45} gap={40}/>
-      </motion.div>
+    </motion.div>
+    {/* Services */}
+    <section className="  relative w-full bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-16 overflow-hidden">
 
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="relative z-20"
+          >
+
+            {/* Heading */}
+            <motion.h2
+              variants={itemVariants2}
+              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+            >
+              Let Your Story Reach the Peak It’s Destined To
+            </motion.h2>
+
+            {/* Paragraph */}
+            <motion.p
+              variants={itemVariants2}
+              className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
+            >
+              Let us be the wind beneath your wings and take your book to the heights it deserves.
+              From concept to completion, we help books soar across global skies and land in the
+              hands of readers everywhere.
+            </motion.p>
+
+            {/* Cards */}
+            
+            <motion.div
+              variants={itemVariants2}
+              className="mt-6 flex flex-wrap justify-center gap-6"
+            >
+              <div className="mt-6 flex flex-wrap justify-center gap-6 max-w-[1200px]">
+              {services.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  image={service.image}
+                  title={service.title}
+                  description={service.description}
+                  buttonText={service.buttonText}
+                  link={service.link}
+                />
+              ))}
+              </div>
+            </motion.div>
+
+          </motion.div>
+        </div>
+    </section>
+    {/* CTA */}
+    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)] my-20">
+      {/* Animated Bird Image */}
+          <img src='images/1.gif' alt="Publishing" className='absolute left-0 bottom-0 w-[350px] h-auto rounded-[20px]' />
+          <img src='images/2.gif' alt="Publishing" className='absolute -right-15 -bottom-4 w-[350px] h-auto rounded-[20px]' />
+
+      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-16 items-center justify-center px-4 md:px-8 py-10 relative">
+        {/* Right Side Content */}
+        
+
+        {/* Left Side Image */}
+        <motion.div 
+          className='md:w-2/4 z-20 flex flex-col justify-end'
+          variants={imageVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.h2 
+            variants={itemVariants}
+            className="text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-white drop-shadow-sm text-center"
+          >
+            Let Your Story Reach the Peak It’s Destined To 
+          </motion.h2>
+
+          <motion.p 
+            variants={itemVariants}
+            className="mt-4 max-w-2xl text-white text-[18px] text-center"
+          >
+            Let us be the wind beneath your wings and take your book to the heights it deserves. From concept to completion, we help books soar across global skies and land in the hands of readers everywhere.
+          </motion.p>
+
+          {/* Animated Buttons */}
+          <motion.div 
+            variants={itemVariants}
+            className='mt-8 flex flex-row items-center justify-center gap-4'
+          >
+            <GradientButton />
+            <SecondaryButton />
+          </motion.div>
+        </motion.div>
+
+        
+      </div>
+    </section>
+    {/* Portfolio */}
+    <section className="  relative w-full bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-16 overflow-hidden">
+
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="relative z-20"
+          >
+
+            {/* Heading */}
+            <motion.h2
+              variants={itemVariants2}
+              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+            >
+              Let Your Story Reach the Peak It’s Destined To
+            </motion.h2>
+
+            {/* Paragraph */}
+            <motion.p
+              variants={itemVariants2}
+              className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
+            >
+              Let us be the wind beneath your wings and take your book to the heights it deserves.
+              From concept to completion, we help books soar across global skies and land in the
+              hands of readers everywhere.
+            </motion.p>
+
+            {/* Cards */}
+            
+            <motion.div
+              variants={itemVariants2}
+              className="mt-6 flex flex-wrap justify-center gap-6"
+            >
+              <TabsSection/>
+              
+            </motion.div>
+
+          </motion.div>
+        </div>
+    </section>
+    {/* CTA 2 */}
+    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)] my-20">
+      {/* Animated Bird Image */}
+
+      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-16 items-center justify-between px-4 md:px-8 relative">
+        
+        {/* Left Side Image */}
+        <motion.div 
+          className='md:w-2/3 z-20 flex flex-col justify-end'
+          variants={imageVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.h2 
+            variants={itemVariants}
+            className="text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
+          >
+            Let Your Story Reach the Peak It’s Destined To 
+          </motion.h2>
+
+          <motion.p 
+            variants={itemVariants}
+            className="mt-4 max-w-2xl text-white text-[18px]"
+          >
+            Let us be the wind beneath your wings and take your book to the heights it deserves. From concept to completion, we help books soar across global skies and land in the hands of readers everywhere.
+          </motion.p>
+
+          {/* Animated Buttons */}
+          <motion.div 
+            variants={itemVariants}
+            className='mt-8 flex flex-row items-center md:justify-start justify-center gap-4'
+          >
+            <GradientButton />
+            <SecondaryButton />
+          </motion.div>
+        </motion.div>
+
+        {/* Right Side Content */}
+        <motion.div 
+          className='liquid-glass-card-2 md:w-1/4 z-20 my-[-50px] p-3'
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <img src='images/books/25.png' alt="Publishing" className='w-full h-auto rounded-[20px]' />
+
+        </motion.div>
+      </div>
+    </section>
+    {/* Testimonial */} 
+    <section className="  relative w-full bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-16 overflow-hidden">
+
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="relative z-20"
+          >
+
+            {/* Heading */}
+            <motion.h2
+              variants={itemVariants2}
+              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+            >
+              Let Your Story Reach the Peak It’s Destined To
+            </motion.h2>
+
+            {/* Paragraph */}
+            <motion.p
+              variants={itemVariants2}
+              className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
+            >
+              Let us be the wind beneath your wings and take your book to the heights it deserves.
+              From concept to completion, we help books soar across global skies and land in the
+              hands of readers everywhere.
+            </motion.p>
+
+            {/* Cards */}
+            
+            <motion.div
+              variants={itemVariants2}
+              className="mt-6 flex flex-wrap justify-center gap-6"
+            >
+              <TestimonialSection/>
+              
+            </motion.div>
+
+          </motion.div>
+        </div>
+    </section>
+    {/* CTA3 */} 
+    <section className="relative w-full bg-[#13B3D3]/20 my-20">
+      {/* Animated Bird Image */}
+
+      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-16 items-center justify-center px-4 md:px-8 relative py-8">
+        
+        {/* Left Side Image */}
+        <motion.div 
+          className='md:w-2/3 max-auto z-20 flex flex-col justify-end'
+          variants={imageVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.h2 
+            variants={itemVariants}
+            className="gradient-text text-[34px] md:text-[48px] font-semibold text-center [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
+          >
+            Let Your Story Reach the Peak It’s Destined To 
+          </motion.h2>
+
+          <motion.p 
+            variants={itemVariants}
+            className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
+          >
+            Let us be the wind beneath your wings and take your book to the heights it deserves. From concept to completion, we help books soar across global skies and land in the hands of readers everywhere.
+          </motion.p>
+
+          {/* Animated Buttons */}
+          <motion.div 
+            variants={itemVariants}
+            className='mt-8 flex flex-row items-center justify-center gap-4'
+          >
+            <GradientButton />
+            <SecondaryButton />
+          </motion.div>
+        </motion.div>
+
+        {/* Right Side Content */}
+        
+      </div>
+    </section>
+    {/* FAQs */} 
+    <section className="  relative w-full bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-16 overflow-hidden">
+
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="relative z-20"
+          >
+
+            {/* Heading */}
+            <motion.h2
+              variants={itemVariants2}
+              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+            >
+              Let Your Story Reach the Peak It’s Destined To
+            </motion.h2>
+
+            {/* Paragraph */}
+            <motion.p
+              variants={itemVariants2}
+              className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
+            >
+              Let us be the wind beneath your wings and take your book to the heights it deserves.
+              From concept to completion, we help books soar across global skies and land in the
+              hands of readers everywhere.
+            </motion.p>
+
+            {/* Cards */}
+            
+            <motion.div
+              variants={itemVariants2}
+              className="mt-6 flex flex-wrap justify-center gap-6"
+            >
+              <FAQSection/>
+              
+            </motion.div>
+
+          </motion.div>
+        </div>
+    </section>
+    <Footer/>
+      
       
 
 
@@ -270,6 +659,6 @@ export default function Home() {
 
 
       
-    </div>
+  </div>
   )
 }

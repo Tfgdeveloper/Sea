@@ -1,12 +1,13 @@
 export default function GradientButton({
   text = "Get Started",
   className = "",
+  padding = "px-[25px] py-[15px]",
 }) {
   return (
     <button
       className={`
         button-font group relative overflow-hidden rounded-full 
-        px-[25px] py-[15px]
+        ${padding}
         font-semibold text-white
         transition-all duration-300
 
