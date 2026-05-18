@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router";
 import GradientButton from "../UI/GradientButton";
 import { ChevronRight } from "lucide-react";
+import Popup from "./Popup";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -52,6 +53,9 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpenIdx, setMobileDropdownOpenIdx] = useState(null);
   const closeTimer = useRef(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => setIsPopupOpen(true);
+  const closePopup = () => setIsPopupOpen(false);
 
   const handleEnter = (i) => {
     clearTimeout(closeTimer.current);
@@ -63,7 +67,7 @@ export default function Header() {
   };
 
   return (
-    <header className="absolute bg-[transprent] w-full z-50">
+    <header className="absolute bg-[transprent] w-full z-20">
       <nav
         
       >
@@ -89,6 +93,7 @@ export default function Header() {
                   onMouseLeave={handleLeave}
                 >
                   <button
+
                     type="button"
                     className="flex items-center gap-1 text-md font-medium"
                     style={{
@@ -151,7 +156,7 @@ export default function Header() {
                               background: "transparent",
                             }}
                           >
-                            <ChevronRight className="w-4 h-4"/>
+                            <ChevronRight className="w-4 h-4 mr-2"/>
                             <span>{child.label}</span>
 
                             {/* Chevron */}
@@ -177,7 +182,9 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden md:flex">
-            <GradientButton text="Start Project" />
+            <GradientButton text="Start Project" 
+              onClick={openPopup}
+              />
           </div>
 
           {/* Mobile Button */}
@@ -200,7 +207,7 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="md:hidden px-4 pb-4"
+              className="md:hidden px-4 pb-4 bg-white"
             >
               {menuItems.map((item, idx) =>
                 item.children ? (
@@ -254,6 +261,12 @@ export default function Header() {
           )}
         </AnimatePresence>
       </nav>
+      {isPopupOpen && (
+        <Popup
+          isOpen={isPopupOpen}
+          closePopup={closePopup}
+        />
+      )}
     </header>
   );
 }

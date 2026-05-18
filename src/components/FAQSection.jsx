@@ -8,20 +8,28 @@ import { Link } from "react-router";
 
 const faqs = [
   {
+    question: "What services does Seawings Publications offer?",
+    answer: "We provide a complete, end-to-end publishing solution — from ghostwriting and manuscript development to editing, cover design, publishing, and marketing. Our goal is to guide you through every step and transform your idea into a professionally published book."
+  },
+  {
+    question: "Do I keep full ownership of my book?",
+    answer: "Yes, you retain 100% ownership and rights to your work. We simply help you prepare, publish, and distribute your book while ensuring you stay in full control of your content and royalties."
+  },
+  {
+    question: "Where will my book be published and distributed?",
+    answer: "Your book can be distributed globally across major platforms like Amazon, Barnes & Noble, IngramSpark, Kobo, and Apple Books, ensuring maximum reach to readers worldwide."
+  },
+  {
+    question: "Can you help if I only have an idea and not a finished manuscript?",
+    answer: "Absolutely. Our ghostwriting and manuscript development services help turn your ideas into a complete, well-structured book while keeping your vision and voice intact."
+  },
+  {
     question: "How long does the publishing process take?",
-    answer: "The timeline varies based on the services required, but typically a full concept-to-shelf journey takes between 4 to 6 months, ensuring every detail from editing to cover design is perfect."
+    answer: "The timeline depends on your project scope (writing, editing, design, etc.), but typically it can take a few weeks to a few months. Our team ensures a smooth and efficient process while maintaining high-quality standards."
   },
   {
-    question: "Do I retain the full rights to my book?",
-    answer: "Absolutely. At SeaWings, we believe your story belongs to you. You retain 100% of your publishing rights and royalties. We are simply the wind beneath your wings to help you fly."
-  },
-  {
-    question: "Can you help with marketing and global distribution?",
-    answer: "Yes, we help books soar across global skies. We handle distribution to major retailers like Amazon, Barnes & Noble, and IngramSpark, alongside targeted marketing strategies."
-  },
-  {
-    question: "What genres do you specialize in?",
-    answer: "We work with everything from Biographies and Fiction to Children's books and Biblical texts. Our team of expert writers and editors are versatile across all literary landscapes."
+    question: "Do you help with marketing and promoting my book?",
+    answer: "Yes, we offer dedicated marketing and PR services including social media campaigns, branding, and promotional strategies to help your book reach the right audience and gain visibility."
   }
 ];
 

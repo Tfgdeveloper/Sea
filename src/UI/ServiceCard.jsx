@@ -12,14 +12,14 @@ const ServiceCard = ({
   link = "#",
 }) => {
   return (
-    <div className="w-[280px] min-h-[550px] rounded-[32px] bg-white p-3 shadow-xl flex flex-col">
+    <div className="w-[350px] md:w-[280px] min-h-[550px] rounded-[32px] bg-white p-3 shadow-xl flex flex-col">
       
       {/* Image */}
       <div className="overflow-hidden rounded-[26px]">
         <img
           src={image}
           alt={title}
-          className="h-[240px] w-full object-cover"
+          className="w-full object-cover"
         />
       </div>
 
@@ -37,7 +37,7 @@ const ServiceCard = ({
         </div>
 
         {/* Button */}
-        <Link to={link} className="mt-auto pt-0">
+        <Link to={link} className="mt-auto pt-5 md:pt-0 ">
           <GradientButton
             text={buttonText}
             className="inline-flex justify-center items-center"

@@ -38,17 +38,17 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="w-full flex justify-center bg-white overflow-hidden">
+    <section className="w-full flex justify-center bg-white overflow-hidden " >
       <div className="max-w-5xl w-full px-4 relative">
         
         {/* Main Blue Card */}
-        <div className="relative  bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)] rounded-[2.5rem] p-10 md:p-20 shadow-2xl text-center min-h-[400px] flex flex-col justify-center items-center ">
+        <div className="relative  bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] rounded-[2.5rem] p-10 md:p-20 shadow-2xl text-center min-h-[400px] flex flex-col justify-center items-center ">
           
           {/* Background Watermark */}
           <div className="absolute inset-0 -bottom-90 flex items-center justify-center opacity-10 pointer-events-none select-none">
-            <h1 className="text-[10rem] md:text-[13rem] font-bold text-white uppercase tracking-tighter">
+            <h3 className="text-[5rem] md:text-[13rem] font-bold text-white uppercase tracking-tighter">
                 SEAWINGS
-            </h1>
+            </h3>
           </div>
 
           {/* Animated Text Content */}
@@ -109,7 +109,7 @@ const TestimonialSection = () => {
                     onClick={() => handleImageClick(index)}
                     className={`relative cursor-pointer rounded-2xl overflow-hidden border-4 transition-all duration-500
                       ${isCenter 
-                        ? "w-28 h-28 md:w-18 md:h-18 border-[#2563EB] z-30 mb-2 scale-100 shadow-blue-900/50" 
+                        ? "w-18 h-18 md:w-18 md:h-18 border-[#2563EB] z-30 mb-2 scale-100 shadow-blue-900/50" 
                         : "w-16 h-16 md:w-16 md:h-16 border-white/80 z-10 hover:opacity-100"
                       }
                     `}

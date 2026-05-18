@@ -118,3 +118,28 @@
 
   
 }
+
+.discount-text {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  animation: blinkScale 1s infinite ease-in-out;
+}
+
+/* Animation */
+@keyframes blinkScale {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

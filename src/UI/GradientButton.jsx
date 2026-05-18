@@ -1,17 +1,23 @@
+import { useState } from "react";
+import Popup from "../components/Popup";
 export default function GradientButton({
   text = "Get Started",
   className = "",
   padding = "px-[25px] py-[15px]",
+  onClick,
 }) {
+
   return (
+
     <button
+      onClick={onClick}
       className={`
         button-font group relative overflow-hidden rounded-full 
         ${padding}
         font-semibold text-white
         transition-all duration-300
 
-        bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)]
+        bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)]
 
         shadow-[0_10px_25px_rgba(19,179,211,0.22)]
         hover:shadow-[0_15px_35px_rgba(19,179,211,0.32)]
@@ -65,6 +71,9 @@ export default function GradientButton({
           />
         </svg>
       </span>
+      
     </button>
+    
+    
   );
 }

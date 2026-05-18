@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Header from '../components/Header'
 import { ChevronRightCircle, ChevronRightCircleIcon, ChevronRightIcon, Section } from 'lucide-react'
@@ -13,6 +13,7 @@ import SplitText from '../UI/SplitText';
 import TestimonialSection from '../components/TestimonialSection';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
+import Popup from '../components/Popup';
 
 // Animation Variants
 const fadeInUp = {
@@ -44,49 +45,49 @@ const listItems = [
 
   const services = [
   {
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    image: "images/publishing.png",
     title: "Publishing & Distribution",
     description: "Simplify the publishing process and make your book available through trusted platforms for global and local reach.",
     buttonText: "Explore Service",
     link: "/web-design",
   },
   {
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    image: "images/editing.png",
     title: "Editing & Proofreading",
     description: "Ensure clarity, flow, and accuracy with professional editing and proofreading that enhance readability and polish your final draft.",
     buttonText: "Explore Service",
     link: "/seo",
   },
   {
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    image: "images/bookcover.png",
     title: "Cover Design & Illustrations",
     description: "Get visually striking covers and illustrations crafted to complement your genre, tone, and audience appeal.",
     buttonText: "Explore Service",
     link: "/branding",
   },
   {
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    image: "images/ghostwriting.png",
     title: "Ghostwriting & Manuscript",
     description: "Collaborate with skilled writers who can help you shape, refine, or complete your manuscript while you have the creative control.",
     buttonText: "Explore Service",
     link: "/ui-ux",
   },
   {
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    image: "images/marketing.png",
     title: "Marketing & PR Campaigns",
     description: "Build awareness through strategic campaigns that help connect your book with its ideal readers across multiple channels.",
     buttonText: "Explore Service",
     link: "/development",
   },
   {
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    image: "images/audio.png",
     title: "Audio Book Publsihing",
     description: "Turn your story into immersive audio formats that engage listeners and expand your audience across popular platforms.",
     buttonText: "Explore Service",
     link: "/marketing",
   },
   {
-    image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    image: "images/times.png",
     title: "Time Square Event",
     description: "Showcase your book in Times Square with bold promotions that create buzz and attract a wider audience fast.",
     buttonText: "Explore Service",
@@ -149,13 +150,18 @@ const listItems = [
     },
   };
 
+  
+
 
 export default function Home() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => setIsPopupOpen(true);
+  const closePopup = () => setIsPopupOpen(false);
   return (
   <div>
     <Header />
     {/* Hero */}
-    <section className="relative w-full min-h-[100vh] bg-black">
+    <section className="relative w-full min-h-[100vh] bg-black z-10">
         <motion.img 
         src='images/bird1.webp' 
         className='z-50 absolute right-0 -bottom-22 w-32 md:w-40'
@@ -179,11 +185,11 @@ export default function Home() {
       
       <div className='inset-0 absolute h-full bg-gradient-to-b from-white to-transparent'></div>
 
-      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 pt-[110px] pb-[50px] relative z-20">
+      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 pt-[200px] md:pt-[110px] pb-[50px] relative z-20">
         
         {/* Left Side: Content */}
         <motion.div 
-          className='md:w-1/2'
+          className='md:w-1/2 text-center md:text-left'
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -191,7 +197,7 @@ export default function Home() {
         >
           <motion.h1 
             variants={fadeInUp}
-            className="text-[34px] md:text-[52px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm"
+            className="text-[36px] md:text-[52px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm "
           >
             Let Your Story Reach the Peak It’s Destined To 
           </motion.h1>
@@ -208,7 +214,9 @@ export default function Home() {
             variants={fadeInUp}
             className='mt-8 flex flex-row items-center md:justify-start justify-center gap-4'
           >
-            <GradientButton />
+            <GradientButton 
+            onClick={openPopup}
+            />
             <SecondaryButton />
           </motion.div>
         </motion.div>
@@ -236,7 +244,7 @@ export default function Home() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
-              className='bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)] w-full py-2 mb-4 origin-left'
+              className='bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] w-full py-2 mb-4 origin-left'
             >
               <p className="max-w-2xl text-white text-[14px] text-center leading-tight px-4">
                 Start your journey with expert support and unbeatable savings.
@@ -252,7 +260,7 @@ export default function Home() {
       </div>
     </section>
     {/* About*/}
-    <section className="relative w-full bg-white overflow-hidden ">
+    <section className="relative w-full bg-white overflow-hidden z-0">
       {/* Animated Bird Image */}
       
 
@@ -271,7 +279,7 @@ export default function Home() {
 
         {/* Right Side Content */}
         <motion.div 
-          className='md:w-1/2 z-20'
+          className='md:w-1/2 z-20 '
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -279,16 +287,17 @@ export default function Home() {
         >
           <motion.h2 
             variants={itemVariants}
-            className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm"
+          className='md:w-1/2 z-20 '
+            className="text-center md:text-left gradient-text text-[36px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm"
           >
-            Let Your Story Reach the Peak It’s Destined To 
+            Start Your Expedition to Best-Selling Authorship
           </motion.h2>
 
           <motion.p 
             variants={itemVariants}
-            className="mt-4 max-w-2xl text-black/80 text-[18px]"
+            className="text-center md:text-left mt-4 max-w-2xl text-black/80 text-[18px]"
           >
-            Let us be the wind beneath your wings and take your book to the heights it deserves. From concept to completion, we help books soar across global skies and land in the hands of readers everywhere.
+            Begin your path as a writer today and transform your book dreams into a reality. We've assisted more than a million clients around the globe with writing, editing, publishing, and marketing. Our dedication is to see you thrive in the world of books.
           </motion.p>
 
           {/* Animated List Items */}
@@ -299,7 +308,7 @@ export default function Home() {
                 variants={itemVariants}
                 className='flex flex-row gap-3 items-center justify-start'
               >
-                <div className='flex-shrink-0 w-6 h-6 bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)] rounded-full flex items-center justify-center'>
+                <div className='flex-shrink-0 w-6 h-6 bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] rounded-full flex items-center justify-center'>
                   <ChevronRightIcon className='w-4 h-4 text-white' />
                 </div>
                 <p className="text-black/80 text-[18px]"> 
@@ -314,7 +323,9 @@ export default function Home() {
             variants={itemVariants}
             className='mt-8 flex flex-row items-center md:justify-start justify-center gap-4'
           >
-            <GradientButton />
+            <GradientButton 
+            onClick={openPopup}
+            />
             <SecondaryButton />
           </motion.div>
         </motion.div>
@@ -322,7 +333,7 @@ export default function Home() {
     </section>
     {/* Logo Marquee */}
     <motion.div 
-          className='relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)] '
+          className='relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] '
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -331,7 +342,7 @@ export default function Home() {
       <LogosMarquee speed={20} height={45} gap={40}/>
     </motion.div>
     {/* Services */}
-    <section className="  relative w-full bg-white overflow-hidden">
+    <section className="  relative w-full bg-white overflow-hidden z-10">
         <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-16 overflow-hidden">
 
           <motion.div
@@ -347,7 +358,7 @@ export default function Home() {
               variants={itemVariants2}
               className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
             >
-              Let Your Story Reach the Peak It’s Destined To
+              One-Stop Solution for All Your Publishing Needs
             </motion.h2>
 
             {/* Paragraph */}
@@ -355,9 +366,8 @@ export default function Home() {
               variants={itemVariants2}
               className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
             >
-              Let us be the wind beneath your wings and take your book to the heights it deserves.
-              From concept to completion, we help books soar across global skies and land in the
-              hands of readers everywhere.
+              
+No need to worry about the “next step” as our experts are here to guide you from the first draft to publishing your book globally.
             </motion.p>
 
             {/* Cards */}
@@ -384,10 +394,10 @@ export default function Home() {
         </div>
     </section>
     {/* CTA */}
-    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)] my-20">
+    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] my-20 z-10">
       {/* Animated Bird Image */}
-          <img src='images/1.gif' alt="Publishing" className='absolute left-0 bottom-0 w-[350px] h-auto rounded-[20px]' />
-          <img src='images/2.gif' alt="Publishing" className='absolute -right-15 -bottom-4 w-[350px] h-auto rounded-[20px]' />
+          <img src='images/1.gif' alt=" Publishing" className='hidden md:flex absolute left-0 bottom-0 w-[350px] h-auto rounded-[20px]' />
+          <img src='images/2.gif' alt="Publishing" className='hidden md:flex absolute -right-15 -bottom-4 w-[350px] h-auto rounded-[20px]' />
 
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-16 items-center justify-center px-4 md:px-8 py-10 relative">
         {/* Right Side Content */}
@@ -405,14 +415,14 @@ export default function Home() {
             variants={itemVariants}
             className="text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-white drop-shadow-sm text-center"
           >
-            Let Your Story Reach the Peak It’s Destined To 
+            Begin Your Book Publishing Journey With Us
           </motion.h2>
 
           <motion.p 
             variants={itemVariants}
             className="mt-4 max-w-2xl text-white text-[18px] text-center"
           >
-            Let us be the wind beneath your wings and take your book to the heights it deserves. From concept to completion, we help books soar across global skies and land in the hands of readers everywhere.
+          Got ideas scribbled in your journal? We would love to hear from you and turn them into a polished book
           </motion.p>
 
           {/* Animated Buttons */}
@@ -420,7 +430,9 @@ export default function Home() {
             variants={itemVariants}
             className='mt-8 flex flex-row items-center justify-center gap-4'
           >
-            <GradientButton />
+            <GradientButton 
+            onClick={openPopup}
+            />
             <SecondaryButton />
           </motion.div>
         </motion.div>
@@ -429,7 +441,7 @@ export default function Home() {
       </div>
     </section>
     {/* Portfolio */}
-    <section className="  relative w-full bg-white overflow-hidden">
+    <section className="  relative w-full bg-white overflow-hidden z-10">
         <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-16 overflow-hidden">
 
           <motion.div
@@ -445,7 +457,7 @@ export default function Home() {
               variants={itemVariants2}
               className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
             >
-              Let Your Story Reach the Peak It’s Destined To
+              Books We've Helped Bring to Life
             </motion.h2>
 
             {/* Paragraph */}
@@ -453,9 +465,7 @@ export default function Home() {
               variants={itemVariants2}
               className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
             >
-              Let us be the wind beneath your wings and take your book to the heights it deserves.
-              From concept to completion, we help books soar across global skies and land in the
-              hands of readers everywhere.
+              Each book here began as a single idea, and with Seawings Publications, it found its wings. See how stories from passionate authors took flight and reached readers worldwide.
             </motion.p>
 
             {/* Cards */}
@@ -472,14 +482,14 @@ export default function Home() {
         </div>
     </section>
     {/* CTA 2 */}
-    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#2563EB_45%,#171E4B_100%)] my-20">
+    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] my-20 z-10">
       {/* Animated Bird Image */}
 
-      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-16 items-center justify-between px-4 md:px-8 relative">
+      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:gap-16 items-center justify-between px-4 md:px-8 relative ">
         
         {/* Left Side Image */}
         <motion.div 
-          className='md:w-2/3 z-20 flex flex-col justify-end'
+          className='md:w-3/5 z-20 flex flex-col justify-end py-8 text-center md:text-left'
           variants={imageVariants}
           initial="hidden"
           whileInView="visible"
@@ -487,16 +497,16 @@ export default function Home() {
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
+            className="text-[36px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
           >
-            Let Your Story Reach the Peak It’s Destined To 
+            Your Story, Ready to Soar with Seawings
           </motion.h2>
 
           <motion.p 
             variants={itemVariants}
             className="mt-4 max-w-2xl text-white text-[18px]"
           >
-            Let us be the wind beneath your wings and take your book to the heights it deserves. From concept to completion, we help books soar across global skies and land in the hands of readers everywhere.
+            Seawings Publications offers complete book publishing services tailored to every author’s needs. From refining your manuscript and designing a captivating cover to handling publishing, distribution, and marketing, we make the process seamless and strategic. We aim to help your story reach readers with professionalism, precision, and purpose.
           </motion.p>
 
           {/* Animated Buttons */}
@@ -504,14 +514,16 @@ export default function Home() {
             variants={itemVariants}
             className='mt-8 flex flex-row items-center md:justify-start justify-center gap-4'
           >
-            <GradientButton />
+            <GradientButton 
+            onClick={openPopup}
+            />
             <SecondaryButton />
           </motion.div>
         </motion.div>
 
         {/* Right Side Content */}
         <motion.div 
-          className='liquid-glass-card-2 md:w-1/4 z-20 my-[-50px] p-3'
+          className='hidden md:flex liquid-glass-card-2 w-[85%] md:w-[30%] z-0 md:my-[-150px] p-3 mb-8 md:mb-0 '
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -523,8 +535,8 @@ export default function Home() {
       </div>
     </section>
     {/* Testimonial */} 
-    <section className="  relative w-full bg-white overflow-hidden">
-        <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-16 overflow-hidden">
+    <section className="  relative w-full bg-white overflow-hidden z-10">
+        <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-0 md:py-16 overflow-hidden">
 
           <motion.div
             variants={fadeInUp}
@@ -539,7 +551,8 @@ export default function Home() {
               variants={itemVariants2}
               className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
             >
-              Let Your Story Reach the Peak It’s Destined To
+              Voices That Took Flight with Seawings
+
             </motion.h2>
 
             {/* Paragraph */}
@@ -547,16 +560,14 @@ export default function Home() {
               variants={itemVariants2}
               className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
             >
-              Let us be the wind beneath your wings and take your book to the heights it deserves.
-              From concept to completion, we help books soar across global skies and land in the
-              hands of readers everywhere.
+              See what our clients have shared about their publishing experience and how Seawings helped their stories soar.
             </motion.p>
 
             {/* Cards */}
             
             <motion.div
               variants={itemVariants2}
-              className="mt-6 flex flex-wrap justify-center gap-6"
+              className="mt-6 flex flex-wrap justify-center gap-6 z-0"
             >
               <TestimonialSection/>
               
@@ -566,7 +577,7 @@ export default function Home() {
         </div>
     </section>
     {/* CTA3 */} 
-    <section className="relative w-full bg-[#13B3D3]/20 my-20">
+    <section className="relative w-full bg-[#13B3D3]/20 my-20 z-10">
       {/* Animated Bird Image */}
 
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-16 items-center justify-center px-4 md:px-8 relative py-8">
@@ -583,14 +594,14 @@ export default function Home() {
             variants={itemVariants}
             className="gradient-text text-[34px] md:text-[48px] font-semibold text-center [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
           >
-            Let Your Story Reach the Peak It’s Destined To 
+            Get On Your Publishing Journey Without Delay!
           </motion.h2>
 
           <motion.p 
             variants={itemVariants}
             className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
           >
-            Let us be the wind beneath your wings and take your book to the heights it deserves. From concept to completion, we help books soar across global skies and land in the hands of readers everywhere.
+            Experience seamless book printing services through Amazon Self-Publisher – your ultimate destination for all your printing requirements. Our efficient solutions ensure your book sees the light of day, no matter when you decide to publish.
           </motion.p>
 
           {/* Animated Buttons */}
@@ -598,7 +609,9 @@ export default function Home() {
             variants={itemVariants}
             className='mt-8 flex flex-row items-center justify-center gap-4'
           >
-            <GradientButton />
+            <GradientButton 
+            onClick={openPopup}
+            />
             <SecondaryButton />
           </motion.div>
         </motion.div>
@@ -608,7 +621,7 @@ export default function Home() {
       </div>
     </section>
     {/* FAQs */} 
-    <section className="  relative w-full bg-white overflow-hidden">
+    <section className="  relative w-full bg-white overflow-hidden ">
         <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-16 overflow-hidden">
 
           <motion.div
@@ -624,7 +637,7 @@ export default function Home() {
               variants={itemVariants2}
               className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
             >
-              Let Your Story Reach the Peak It’s Destined To
+              Frequently Asked Questions
             </motion.h2>
 
             {/* Paragraph */}
@@ -632,9 +645,7 @@ export default function Home() {
               variants={itemVariants2}
               className="mt-4 max-w-2xl text-black/80 text-[18px] text-center mx-auto"
             >
-              Let us be the wind beneath your wings and take your book to the heights it deserves.
-              From concept to completion, we help books soar across global skies and land in the
-              hands of readers everywhere.
+              Everything you need to know. Can't find an answer? Reach out to our team anytime.
             </motion.p>
 
             {/* Cards */}
@@ -651,7 +662,12 @@ export default function Home() {
         </div>
     </section>
     <Footer/>
-      
+     {isPopupOpen && (
+        <Popup
+          isOpen={isPopupOpen}
+          closePopup={closePopup}
+        />
+        )} 
       
 
 
