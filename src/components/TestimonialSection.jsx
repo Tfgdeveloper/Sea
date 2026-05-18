@@ -4,11 +4,11 @@ import SplitText from "../UI/SplitText";
 
 // Mock data - can be 10 or 1000 items
 const allTestimonials = [
-  { id: 1, name: "Sarah Jenkins", role: "Author", quote: "The level of detail and support provided was beyond my expectations. My book looks incredible.", image: "https://randomuser.me/api/portraits/women/44.jpg" },
-  { id: 2, name: "Jessica Lee", role: "Freelancer", quote: "Since using SeaWings, we don’t have to chase payments. It’s all automated and smooth.", image: "https://randomuser.me/api/portraits/women/68.jpg" },
-  { id: 3, name: "Michael Chen", role: "Writer", quote: "Finding a partner who understands your vision is rare. This team is exceptional.", image: "https://randomuser.me/api/portraits/men/32.jpg" },
-  { id: 4, name: "David Miller", role: "Editor", quote: "Professional, prompt, and precise. Exactly what every author needs in their corner.", image: "https://randomuser.me/api/portraits/men/45.jpg" },
-  { id: 5, name: "Emma Wilson", role: "Poet", quote: "They took my raw manuscript and turned it into a masterpiece. Highly recommended!", image: "https://randomuser.me/api/portraits/women/22.jpg" },
+  { id: 1, name: "Cassie Wright", role: "Author", quote: "Publishing my book became simple and organized. The whole process felt smooth and stress-free with proper guidance.", image: "https://randomuser.me/api/portraits/women/1.jpg" },
+  { id: 2, name: "Riley Lazard", role: "Freelancer", quote: "I wasn't sure how my story would translate visually, but the illustration service really brought it to life in a way I didn't expect. The artwork felt thoughtful and true to the tone of my book.", image: "https://randomuser.me/api/portraits/men/20.jpg" },
+  { id: 3, name: "Edina Kiss", role: "Writer", quote: "The editing and proofreading service improved my manuscript flow while keeping my original voice intact.", image: "https://randomuser.me/api/portraits/women/70.jpg" },
+  { id: 4, name: "Jeffrey Carswell", role: "Editor", quote: "Publishing my book became simple and organized. The whole process felt smooth and stress-free with proper guidance.", image: "https://randomuser.me/api/portraits/men/23.jpg" },
+  { id: 5, name: "Penn Wryder", role: "Poet", quote: "I wasn't sure how my story would translate visually, but the illustration service really brought it to life in a way I didn't expect. The artwork felt thoughtful and true to the tone of my book.", image: "https://randomuser.me/api/portraits/women/50.jpg" },
 ];
 
 const TestimonialSection = () => {

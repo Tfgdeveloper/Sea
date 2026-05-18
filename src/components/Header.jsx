@@ -103,7 +103,10 @@ export default function Header() {
                       cursor: "pointer",
                     }}
                   >
-                    {item.label}
+                    <Link to="/services">
+                    Services
+                    </Link>
+                    
 
                     <svg
                       className="w-3.5 h-3.5 transition-transform"

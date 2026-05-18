@@ -5,7 +5,6 @@ import { ChevronRightCircle, ChevronRightCircleIcon, ChevronRightIcon, Section }
 import GradientButton from '../UI/GradientButton'
 import { SecondaryButton } from '../UI/SecondaryButton'
 import ContactForm from '../components/ContactForm'
-import ImageCarousel from '../components/ImageCarousel';
 import LogosMarquee from '../components/LogosMarquee';
 import ServiceCard from '../UI/ServiceCard';
 import TabsSection from '../components/TabsSection';
@@ -212,7 +211,7 @@ export default function Home() {
 
           <motion.div 
             variants={fadeInUp}
-            className='mt-8 flex flex-row items-center md:justify-start justify-center gap-4'
+            className='mt-8 flex flex-col md:flex-row items-center md:justify-start justify-center gap-4'
           >
             <GradientButton 
             onClick={openPopup}
@@ -321,7 +320,7 @@ export default function Home() {
           {/* Animated Buttons */}
           <motion.div 
             variants={itemVariants}
-            className='mt-8 flex flex-row items-center md:justify-start justify-center gap-4'
+            className='mt-8 flex flex-col md:flex-row items-center md:justify-start justify-center gap-4'
           >
             <GradientButton 
             onClick={openPopup}
@@ -428,7 +427,7 @@ No need to worry about the “next step” as our experts are here to guide you 
           {/* Animated Buttons */}
           <motion.div 
             variants={itemVariants}
-            className='mt-8 flex flex-row items-center justify-center gap-4'
+            className='mt-8 flex flex-col md:flex-row items-center justify-center gap-4'
           >
             <GradientButton 
             onClick={openPopup}
@@ -489,7 +488,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         
         {/* Left Side Image */}
         <motion.div 
-          className='md:w-3/5 z-20 flex flex-col justify-end py-0 text-center md:text-left'
+          className='md:w-3/5 z-20 flex flex-col justify-end py-8 md:py-0 text-center md:text-left'
           variants={imageVariants}
           initial="hidden"
           whileInView="visible"
@@ -512,7 +511,7 @@ No need to worry about the “next step” as our experts are here to guide you 
           {/* Animated Buttons */}
           <motion.div 
             variants={itemVariants}
-            className='mt-8 flex flex-row items-center md:justify-start justify-center gap-4'
+            className='mt-8 flex flex-col md:flex-row items-center md:justify-start justify-center gap-4'
           >
             <GradientButton 
             onClick={openPopup}
@@ -607,7 +606,7 @@ No need to worry about the “next step” as our experts are here to guide you 
           {/* Animated Buttons */}
           <motion.div 
             variants={itemVariants}
-            className='mt-8 flex flex-row items-center justify-center gap-4'
+            className='mt-8 flex flex-col md:flex-row items-center justify-center gap-4'
           >
             <GradientButton 
             onClick={openPopup}

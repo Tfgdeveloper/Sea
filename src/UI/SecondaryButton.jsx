@@ -1,13 +1,13 @@
 import { Phone, PhoneCall } from "lucide-react";
 
 export function SecondaryButton({
-  text = "(855) 553-3713",
+  text = "(737) 220-1691",
   className = "",
   padding = "px-[25px] py-[15px]",
 }) {
   return (
     <a
-    href="tel:+18555533713"
+    href="tel:+17372201691"
       className={`
         group relative overflow-hidden rounded-full
         ${padding}
