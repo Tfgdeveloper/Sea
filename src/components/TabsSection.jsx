@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const tabsData = [
   {
@@ -125,13 +125,16 @@ const TabsSection = () => {
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
-    const activeBtn = scrollRef.current?.querySelector(`[data-id="${tabId}"]`);
-    if (activeBtn) {
-      activeBtn.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center",
-      });
+    // Only scroll into view on mobile
+    if (window.innerWidth < 768) {
+      const activeBtn = scrollRef.current?.querySelector(`[data-id="${tabId}"]`);
+      if (activeBtn) {
+        activeBtn.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
     }
   };
 
@@ -143,8 +146,8 @@ const TabsSection = () => {
           ref={scrollRef}
           className="
             flex gap-2 rounded-full bg-white p-[4px]
-            overflow-x-auto md:overflow-visible
-            md:flex-wrap md:justify-center
+            overflow-x-auto md:overflow-x-visible
+            flex-nowrap md:flex-wrap md:justify-center
             [scroll-snap-type:x_mandatory] md:[scroll-snap-type:none]
             [-webkit-overflow-scrolling:touch]
             [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
@@ -156,7 +159,7 @@ const TabsSection = () => {
               data-id={tab.id}
               onClick={() => handleTabClick(tab.id)}
               className={`
-                whitespace-nowrap flex-shrink-0
+                whitespace-nowrap flex-shrink-0 md:flex-shrink
                 px-[20px] py-[10px] rounded-full
                 transition-all duration-300 text-[18px]
                 [scroll-snap-align:center] md:[scroll-snap-align:none]

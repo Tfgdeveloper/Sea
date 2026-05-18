@@ -237,7 +237,7 @@ export default function Home() {
               Sign Up And Get
             </h2>
             <h2 className="text-[34px] md:text-[34px] font-bold text-center text-black drop-shadow-sm mb-4">
-              60% Discount
+              50% Discount
             </h2>
             
             <motion.div 
@@ -489,7 +489,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         
         {/* Left Side Image */}
         <motion.div 
-          className='md:w-3/5 z-20 flex flex-col justify-end py-8 text-center md:text-left'
+          className='md:w-3/5 z-20 flex flex-col justify-end py-0 text-center md:text-left'
           variants={imageVariants}
           initial="hidden"
           whileInView="visible"
@@ -523,7 +523,7 @@ No need to worry about the “next step” as our experts are here to guide you 
 
         {/* Right Side Content */}
         <motion.div 
-          className='hidden md:flex liquid-glass-card-2 w-[85%] md:w-[30%] z-0 md:my-[-150px] p-3 mb-8 md:mb-0 '
+          className='hidden md:flex liquid-glass-card-2 w-[85%] md:w-[30%] z-0 md:my-[-50px] p-3 '
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
