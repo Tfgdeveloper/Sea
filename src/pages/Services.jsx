@@ -187,7 +187,7 @@ const Services = () => {
                 >
                   <motion.h1 
                     variants={fadeInUp}
-                    className="text-[36px] md:text-[72px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm "
+                    className="text-[36px] md:text-[72px] font-bold [word-spacing:-14px] leading-tight text-black drop-shadow-sm "
                   >
                     Our Services
                   </motion.h1>
@@ -231,7 +231,7 @@ const Services = () => {
             {/* Heading */}
             <motion.h2
               variants={itemVariants2}
-              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+              className=" text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight text-black"
             >
               One-Stop Solution for All Your Publishing Needs
             </motion.h2>
@@ -292,7 +292,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         </div>
     </section>
     {/* CTA */}
-    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)]  z-10">
+    <section className="relative w-full bg-[#171E4B]  z-10">
           {/* Animated Bird Image */}
               <img src='images/1.gif' alt=" Publishing" className='hidden md:flex absolute left-0 bottom-0 w-[350px] h-auto rounded-[20px]' />
               <img src='images/2.gif' alt="Publishing" className='hidden md:flex absolute -right-15 -bottom-4 w-[350px] h-auto rounded-[20px]' />
@@ -311,7 +311,7 @@ No need to worry about the “next step” as our experts are here to guide you 
             >
               <motion.h2 
                 variants={itemVariants}
-                className="text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-white drop-shadow-sm text-center"
+                className="text-[34px] md:text-[48px] font-bold [word-spacing:-14px] leading-tight text-white drop-shadow-sm text-center"
               >
                 Begin Your Book Publishing Journey With Us
               </motion.h2>
@@ -353,7 +353,7 @@ No need to worry about the “next step” as our experts are here to guide you 
             {/* Heading */}
             <motion.h2
               variants={itemVariants2}
-              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+              className=" text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight text-black"
             >
               Voices That Took Flight with Seawings
 
@@ -396,7 +396,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         >
           <motion.h2 
             variants={itemVariants}
-            className="gradient-text text-[34px] md:text-[48px] font-semibold text-center [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
+            className=" text-[34px] md:text-[48px] font-semibold text-center [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
           >
             Get On Your Publishing Journey Without Delay!
           </motion.h2>
@@ -439,7 +439,7 @@ No need to worry about the “next step” as our experts are here to guide you 
             {/* Heading */}
             <motion.h2
               variants={itemVariants2}
-              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+              className=" text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight text-black"
             >
               Frequently Asked Questions
             </motion.h2>

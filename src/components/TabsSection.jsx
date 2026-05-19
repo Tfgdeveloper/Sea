@@ -141,7 +141,7 @@ const TabsSection = () => {
   return (
     <div className="w-full mx-auto p-4">
       {/* Tabs Header */}
-      <div className="max-w-5xl mx-auto p-[2px] bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] rounded-full mb-12">
+      <div className="max-w-5xl mx-auto p-[2px] bg-[#171E4B] rounded-full mb-12">
         <div
           ref={scrollRef}
           className="
@@ -165,7 +165,7 @@ const TabsSection = () => {
                 [scroll-snap-align:center] md:[scroll-snap-align:none]
                 ${
                   activeTab === tab.id
-                    ? "bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] text-white"
+                    ? "bg-[#171E4B] text-white"
                     : "bg-transparent text-black"
                 }
               `}

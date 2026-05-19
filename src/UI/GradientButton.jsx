@@ -7,6 +7,9 @@ export default function GradientButton({
   onClick,
 }) {
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => setIsPopupOpen(true);
+  const closePopup = () => setIsPopupOpen(false);
   return (
 
     <button
@@ -17,7 +20,7 @@ export default function GradientButton({
         font-semibold text-white
         transition-all duration-300
 
-        bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)]
+        bg-[#13B3D3]
 
         shadow-[0_10px_25px_rgba(19,179,211,0.22)]
         hover:shadow-[0_15px_35px_rgba(19,179,211,0.32)]

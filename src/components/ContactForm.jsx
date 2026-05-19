@@ -132,7 +132,7 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] text-white hover:scale-110 font-bold py-3 px-8 rounded-full transition-scale duration-200 whitespace-nowrap"
+        className="w-full bg-[#171E4B] text-white hover:scale-110 font-bold py-3 px-8 rounded-full transition-scale duration-200 whitespace-nowrap"
       disabled={isLoading} // Disable the button when loading
 >
   {isLoading ? "Sending..." : "Send"} {/* Display loading text */}

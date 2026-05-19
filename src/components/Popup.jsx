@@ -59,16 +59,16 @@ const Popup = ({ isOpen, closePopup }) => {
             
             className='w-full bg-white backdrop-blur-md border border-white/50 rounded-2xl py-4 shadow-2xl'
           >
-            <h2 className="gradient-text text-[18px] font-semibold text-center text-white drop-shadow-sm">
+            <h2 className=" text-[18px] font-semibold text-center text-white drop-shadow-sm">
               Sign Up And Get
             </h2>
-            <h2 className="gradient-text text-[34px] md:text-[34px] font-bold text-center text-white drop-shadow-sm mb-4">
+            <h2 className=" text-[34px] md:text-[34px] font-bold text-center text-white drop-shadow-sm mb-4">
               50% Discount
             </h2>
             
             <motion.div 
               
-              className='bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] w-full py-2 mb-4 origin-left'
+              className='bg-[#171E4B] w-full py-2 mb-4 origin-left'
             >
               <div className='flex flex-row items-center justify-center mt-0'>
                 <div className='w-10 h-[1px] bg-[#FFC83D] mr-2'/>

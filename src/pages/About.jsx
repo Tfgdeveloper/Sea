@@ -157,7 +157,7 @@ const About = () => {
                 >
                   <motion.h1 
                     variants={fadeInUp}
-                    className="text-[36px] md:text-[72px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm "
+                    className="text-[36px] md:text-[72px] font-bold [word-spacing:-14px] leading-tight text-black drop-shadow-sm "
                   >
                     About Us
                   </motion.h1>
@@ -201,7 +201,7 @@ const About = () => {
                     {/* Heading */}
                     <motion.h2
                       variants={itemVariants2}
-                      className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+                      className="text-black text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight "
                     >
                       One-Stop Solution for All Your Publishing Needs
                     </motion.h2>
@@ -234,7 +234,7 @@ const About = () => {
               <ImageMarquee/>
         </motion.div>
         {/* CTA */}
-        <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] z-10">
+        <section className="relative w-full bg-[#171E4B] z-10">
               {/* Animated Bird Image */}
         
               <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:gap-16 items-center justify-between px-4 md:px-8 relative ">
@@ -249,7 +249,7 @@ const About = () => {
                 >
                   <motion.h2 
                     variants={itemVariants}
-                    className="text-[36px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
+                    className="text-[36px] md:text-[48px] font-bold [word-spacing:-14px] leading-tight text-white drop-shadow-sm"
                   >
                     Your Story, Ready to Soar with Seawings
                   </motion.h2>
@@ -350,7 +350,7 @@ const About = () => {
                     {/* Heading */}
                     <motion.h2
                       variants={itemVariants2}
-                      className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+                      className="text-black text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight "
                     >
                       One-Stop Solution for All Your Publishing Needs
                     </motion.h2>
@@ -401,7 +401,7 @@ const About = () => {
                 >
                   <motion.h2 
                     variants={itemVariants}
-                    className="gradient-text text-[34px] md:text-[48px] font-semibold text-center [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
+                    className="text-black text-[34px] md:text-[48px] font-bold text-center [word-spacing:-8px] leading-tight drop-shadow-sm"
                   >
                     Get On Your Publishing Journey Without Delay!
                   </motion.h2>
@@ -444,7 +444,7 @@ const About = () => {
             {/* Heading */}
             <motion.h2
               variants={itemVariants2}
-              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+              className="text-black text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight "
             >
               Voices That Took Flight with Seawings
 

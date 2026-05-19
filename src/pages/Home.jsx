@@ -160,7 +160,7 @@ export default function Home() {
   <div>
     <Header />
     {/* Hero */}
-    <section className="relative w-full min-h-[100vh] bg-black z-10">
+    <section className="relative w-full min-h-[100vh] bg-black z-10 flex flex-col items-center justify-center">
         <motion.img 
         src='images/bird1.webp' 
         className='z-50 absolute right-0 -bottom-22 w-32 md:w-40'
@@ -196,7 +196,7 @@ export default function Home() {
         >
           <motion.h1 
             variants={fadeInUp}
-            className="text-[36px] md:text-[52px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm "
+            className="text-[36px] md:text-[52px] font-bold [word-spacing:-14px] leading-tight text-black drop-shadow-sm "
           >
             Let Your Story Reach the Peak It’s Destined To 
           </motion.h1>
@@ -216,7 +216,7 @@ export default function Home() {
             <GradientButton 
             onClick={openPopup}
             />
-            <SecondaryButton />
+            
           </motion.div>
         </motion.div>
 
@@ -243,7 +243,7 @@ export default function Home() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
-              className='bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] w-full py-2 mb-4 origin-left'
+              className='bg-[#171E4B] w-full py-2 mb-4 origin-left'
             >
               <p className="max-w-2xl text-white text-[14px] text-center leading-tight px-4">
                 Start your journey with expert support and unbeatable savings.
@@ -287,7 +287,7 @@ export default function Home() {
           <motion.h2 
             variants={itemVariants}
           className='md:w-1/2 z-20 '
-            className="text-center md:text-left gradient-text text-[36px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-black drop-shadow-sm"
+            className="text-center md:text-left  text-[36px] md:text-[48px] font-bold [word-spacing:-14px] leading-tight text-black drop-shadow-sm"
           >
             Start Your Expedition to Best-Selling Authorship
           </motion.h2>
@@ -307,7 +307,7 @@ export default function Home() {
                 variants={itemVariants}
                 className='flex flex-row gap-3 items-center justify-start'
               >
-                <div className='flex-shrink-0 w-6 h-6 bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] rounded-full flex items-center justify-center'>
+                <div className='flex-shrink-0 w-6 h-6 bg-[#171E4B] rounded-full flex items-center justify-center'>
                   <ChevronRightIcon className='w-4 h-4 text-white' />
                 </div>
                 <p className="text-black/80 text-[18px]"> 
@@ -332,7 +332,7 @@ export default function Home() {
     </section>
     {/* Logo Marquee */}
     <motion.div 
-          className='relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] '
+          className='relative w-full bg-[#171E4B] '
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -355,7 +355,7 @@ export default function Home() {
             {/* Heading */}
             <motion.h2
               variants={itemVariants2}
-              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+              className=" text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight text-black"
             >
               One-Stop Solution for All Your Publishing Needs
             </motion.h2>
@@ -393,7 +393,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         </div>
     </section>
     {/* CTA */}
-    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] my-20 z-10">
+    <section className="relative w-full bg-[#171E4B] my-20 z-10">
       {/* Animated Bird Image */}
           <img src='images/1.gif' alt=" Publishing" className='hidden md:flex absolute left-0 bottom-0 w-[350px] h-auto rounded-[20px]' />
           <img src='images/2.gif' alt="Publishing" className='hidden md:flex absolute -right-15 -bottom-4 w-[350px] h-auto rounded-[20px]' />
@@ -412,7 +412,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-white drop-shadow-sm text-center"
+            className="text-[34px] md:text-[48px] font-bold [word-spacing:-14px] leading-tight text-white drop-shadow-sm text-center"
           >
             Begin Your Book Publishing Journey With Us
           </motion.h2>
@@ -454,7 +454,7 @@ No need to worry about the “next step” as our experts are here to guide you 
             {/* Heading */}
             <motion.h2
               variants={itemVariants2}
-              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+              className=" text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight text-black"
             >
               Books We've Helped Bring to Life
             </motion.h2>
@@ -481,7 +481,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         </div>
     </section>
     {/* CTA 2 */}
-    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] my-20 z-10">
+    <section className="relative w-full bg-[#171E4B] my-20 z-10">
       {/* Animated Bird Image */}
 
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:gap-16 items-center justify-between px-4 md:px-8 relative ">
@@ -496,7 +496,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-[36px] md:text-[48px] font-semibold [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
+            className="text-[36px] md:text-[48px] font-bold [word-spacing:-14px] leading-tight text-white drop-shadow-sm"
           >
             Your Story, Ready to Soar with Seawings
           </motion.h2>
@@ -548,7 +548,7 @@ No need to worry about the “next step” as our experts are here to guide you 
             {/* Heading */}
             <motion.h2
               variants={itemVariants2}
-              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+              className=" text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight text-black"
             >
               Voices That Took Flight with Seawings
 
@@ -591,7 +591,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         >
           <motion.h2 
             variants={itemVariants}
-            className="gradient-text text-[34px] md:text-[48px] font-semibold text-center [word-spacing:-8px] leading-tight text-white drop-shadow-sm"
+            className=" text-[34px] md:text-[48px] font-bold text-center [word-spacing:-8px] leading-tight text-black drop-shadow-sm"
           >
             Get On Your Publishing Journey Without Delay!
           </motion.h2>
@@ -634,7 +634,7 @@ No need to worry about the “next step” as our experts are here to guide you 
             {/* Heading */}
             <motion.h2
               variants={itemVariants2}
-              className="gradient-text text-[34px] md:text-[48px] font-semibold [word-spacing:-8px] text-center leading-tight text-black"
+              className=" text-[34px] md:text-[48px] font-bold [word-spacing:-14px] text-center leading-tight text-black"
             >
               Frequently Asked Questions
             </motion.h2>

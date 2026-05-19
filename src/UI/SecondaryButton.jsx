@@ -13,7 +13,7 @@ export function SecondaryButton({
         ${padding}
         font-semibold
 
-        text-[#171E4B]
+        text-[#13B3D3]
 
         border border-[#13B3D3]/25
         bg-white/80
@@ -21,10 +21,10 @@ export function SecondaryButton({
 
         transition-all duration-300
 
-        hover:bg-[#13B3D3]/5
+        hover:bg-[#13B3D3]/25
         hover:border-[#13B3D3]/40
         hover:shadow-[0_10px_30px_rgba(19,179,211,0.12)]
-
+        
         active:scale-[0.98]
 
         ${className}

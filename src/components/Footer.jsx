@@ -31,7 +31,7 @@ const imageVariants = {
   return (
     <>
   
-    <footer className="w-full  bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] pt-8 pb-2 px-4 md:px-8 border-t border-gray-100">
+    <footer className="w-full  bg-[#171E4B] pt-8 pb-2 px-4 md:px-8 border-t border-gray-100">
       <div className="max-w-[1600px] mx-auto">
         <div className="flex flex-col md:flex-row gap-12 mb-4 justify-between">
           
@@ -42,8 +42,8 @@ const imageVariants = {
               We support you at every stage of your journey, from the first draft to selling your book. Join us, and let's create your success story together.
             </p>
             <div className="w-fit">
-              <button onClick={openPopup}  className="bg-white text-white px-8 py-3 rounded-full font-bold shadow-lg hover:opacity-90 transition-all active:scale-95">
-               <span className=' gradient-text'>Schedule Consultation</span> 
+              <button onClick={openPopup}  className="bg-white text-[#171E4B] px-8 py-3 rounded-full font-bold shadow-lg hover:opacity-90 transition-all active:scale-95">
+               <span className=' '>Schedule Consultation</span> 
               </button>
             </div>
             
