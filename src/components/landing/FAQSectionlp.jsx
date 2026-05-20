@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 
-import SplitText from "../UI/SplitText";
+import SplitText from "../../UI/SplitText";
 import { ChevronDownIcon } from "lucide-react";
 import { Link } from "react-router";
 
@@ -41,20 +41,20 @@ const FAQItem = ({ faq, isOpen, toggle, index }) => {
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
       className={`mb-4 overflow-hidden rounded-[1.5rem] border transition-all duration-300 ${
-        isOpen ? "border-[#13B3D3] bg-[#13B3D3]/5 shadow-lg" : "border-gray-200 bg-white"
+        isOpen ? "border-[#171E4B] bg-[#171E4B]/5 shadow-lg" : "border-gray-200 bg-white"
       }`}
     >
       <button
         onClick={toggle}
         className="flex w-full items-center justify-between p-6 text-left"
       >
-        <span className={`text-lg font-semibold transition-colors ${isOpen ? "text-[#13B3D3]" : "text-gray-900"}`}>
+        <span className={`text-lg font-semibold transition-colors ${isOpen ? "text-[#171E4B]" : "text-gray-900"}`}>
           {faq.question}
         </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className={`rounded-full p-1 ${isOpen ? "bg-[#13B3D3] text-white" : "bg-gray-100 text-gray-500"}`}
+          className={`rounded-full p-1 ${isOpen ? "bg-[#171E4B] text-white" : "bg-gray-100 text-gray-500"}`}
         >
           <ChevronDownIcon className="h-5 w-5" />
         </motion.div>
@@ -68,7 +68,7 @@ const FAQItem = ({ faq, isOpen, toggle, index }) => {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-[#13B3D3] pt-4">
+            <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-[#171E4B] pt-4">
               {faq.answer}
             </div>
           </motion.div>
@@ -78,7 +78,7 @@ const FAQItem = ({ faq, isOpen, toggle, index }) => {
   );
 };
 
-const FAQSection = () => {
+const FAQSectionlp = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
@@ -113,7 +113,7 @@ const FAQSection = () => {
         >
           <p className="text-gray-600">
             Still have questions? {" "}
-            <Link to="" className="font-bold text-[#13B3D3] hover:underline">
+            <Link to="" className="font-bold text-[#171E4B] hover:underline">
               Contact our flight crew today.
             </Link>
           </p>
@@ -123,4 +123,4 @@ const FAQSection = () => {
   );
 };
 
-export default FAQSection;
+export default FAQSectionlp;

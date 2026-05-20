@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Header from '../components/Header'
-import Footer from '../components/Footer';
-import Popup from '../components/Popup';
-import GradientButton from '../UI/GradientButton'
-import { SecondaryButton } from '../UI/SecondaryButton'
-import ScrollReveal from "../UI/ScrollReveal";
-import ImageMarquee from "../components/ImageMarquee";
-import CountUp from "../UI/CountUp";
-import Card from "../UI/Card";
-import TestimonialSection from "../components/TestimonialSection";
+import Header from '../../components/Header'
+import Footer from '../../components/Footer';
+import Popup from '../../components/Popup';
+import GradientButton from '../../UI/GradientButton'
+import { SecondaryButton } from '../../UI/SecondaryButton'
+import ScrollReveal from "../../UI/ScrollReveal";
+import ImageMarquee from "../../components/ImageMarquee";
+import CountUp from "../../UI/CountUp";
+import Card from "../../UI/Card";
+import TestimonialSection from "../../components/TestimonialSection";
 import { Link } from "react-router";
 
-import FAQSection from '../components/FAQSection';
+import FAQSection from '../../components/FAQSection';
+import SEO from "../../components/SEO";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -147,6 +148,13 @@ const Services = () => {
     const closePopup = () => setIsPopupOpen(false);
   return (
     <div>
+      <SEO
+        title="Book Publishing Services | Seawings Publications" 
+        description="Explore Seawings Publications services including ghostwriting, editing, design, publishing, distribution & book marketing for global authors."
+        keyword="book publishing services"
+        link="https://www.seawingspublications.com/services"
+        
+       ></SEO>
         <Header />
         {/* Hero */}
         <section className="relative w-full min-h-[100vh] md:min-h-[80vh] bg-black z-10 flex flex-col items-center justify-center">
@@ -211,13 +219,13 @@ const Services = () => {
                   </motion.div>
                 </motion.div>
         
-                {/* Right Side: Form Card */}
+                
                 
         
               </div>
         </section>
         {/* Services */}
-    <section className="  relative w-full bg-white overflow-hidden z-10">
+    <section className="  relative w-full bg-white overflow-hidden z-0">
         <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-16 overflow-hidden">
 
           <motion.div
@@ -292,7 +300,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         </div>
     </section>
     {/* CTA */}
-    <section className="relative w-full bg-[#171E4B]  z-10">
+    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)]  z-10">
           {/* Animated Bird Image */}
               <img src='images/1.gif' alt=" Publishing" className='hidden md:flex absolute left-0 bottom-0 w-[350px] h-auto rounded-[20px]' />
               <img src='images/2.gif' alt="Publishing" className='hidden md:flex absolute -right-15 -bottom-4 w-[350px] h-auto rounded-[20px]' />

@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Header from '../components/Header'
+import Header from '../../components/Header'
 import { ChevronRightCircle, ChevronRightCircleIcon, ChevronRightIcon, Section } from 'lucide-react'
-import GradientButton from '../UI/GradientButton'
-import { SecondaryButton } from '../UI/SecondaryButton'
-import ContactForm from '../components/ContactForm'
-import LogosMarquee from '../components/LogosMarquee';
-import ServiceCard from '../UI/ServiceCard';
-import TabsSection from '../components/TabsSection';
-import SplitText from '../UI/SplitText';
-import TestimonialSection from '../components/TestimonialSection';
-import FAQSection from '../components/FAQSection';
-import Footer from '../components/Footer';
-import Popup from '../components/Popup';
+import GradientButton from '../../UI/GradientButton'
+import { SecondaryButton } from '../../UI/SecondaryButton'
+import ContactForm from '../../components/ContactForm'
+import LogosMarquee from '../../components/LogosMarquee';
+import ServiceCard from '../../UI/ServiceCard';
+import TabsSection from '../../components/TabsSection';
+import SplitText from '../../UI/SplitText';
+import TestimonialSection from '../../components/TestimonialSection';
+import FAQSection from '../../components/FAQSection';
+import Footer from '../../components/Footer';
+import Popup from '../../components/Popup';
+import SEO from "../../components/SEO";
 
 // Animation Variants
 const fadeInUp = {
@@ -48,49 +49,51 @@ const listItems = [
     title: "Publishing & Distribution",
     description: "Simplify the publishing process and make your book available through trusted platforms for global and local reach.",
     buttonText: "Explore Service",
-    link: "/web-design",
-  },
-  {
-    image: "images/editing.png",
-    title: "Editing & Proofreading",
-    description: "Ensure clarity, flow, and accuracy with professional editing and proofreading that enhance readability and polish your final draft.",
-    buttonText: "Explore Service",
-    link: "/seo",
-  },
-  {
-    image: "images/bookcover.png",
-    title: "Cover Design & Illustrations",
-    description: "Get visually striking covers and illustrations crafted to complement your genre, tone, and audience appeal.",
-    buttonText: "Explore Service",
-    link: "/branding",
+    link: "/publishing-and-distribution",
   },
   {
     image: "images/ghostwriting.png",
     title: "Ghostwriting & Manuscript",
     description: "Collaborate with skilled writers who can help you shape, refine, or complete your manuscript while you have the creative control.",
     buttonText: "Explore Service",
-    link: "/ui-ux",
+    link: "/ghostwriting-&-manuscript",
   },
+  
+  {
+    image: "images/editing.png",
+    title: "Editing & Proofreading",
+    description: "Ensure clarity, flow, and accuracy with professional editing and proofreading that enhance readability and polish your final draft.",
+    buttonText: "Explore Service",
+    link: "/editing-&-proofreading",
+  },
+  {
+    image: "images/bookcover.png",
+    title: "Cover Design & Illustrations",
+    description: "Get visually striking covers and illustrations crafted to complement your genre, tone, and audience appeal.",
+    buttonText: "Explore Service",
+    link: "/coverdesign-&-Illustrations",
+  },
+  
   {
     image: "images/marketing.png",
     title: "Marketing & PR Campaigns",
     description: "Build awareness through strategic campaigns that help connect your book with its ideal readers across multiple channels.",
     buttonText: "Explore Service",
-    link: "/development",
+    link: "/marketing-&-campaigns",
   },
   {
     image: "images/audio.png",
     title: "Audio Book Publsihing",
     description: "Turn your story into immersive audio formats that engage listeners and expand your audience across popular platforms.",
     buttonText: "Explore Service",
-    link: "/marketing",
+    link: "/audiobook",
   },
   {
     image: "images/times.png",
     title: "Time Square Event",
     description: "Showcase your book in Times Square with bold promotions that create buzz and attract a wider audience fast.",
     buttonText: "Explore Service",
-    link: "/content-writing",
+    link: "/time-square-event",
   },
 ];
 
@@ -158,6 +161,13 @@ export default function Home() {
   const closePopup = () => setIsPopupOpen(false);
   return (
   <div>
+    <SEO
+        title="Professional Book Publishing Services | Seawings Publications" 
+        description="Professional book publishing services including editing, design, distribution & marketing to help authors publish and sell books worldwide."
+        keyword="Professional Book Publishing Services"
+        link="https://www.seawingspublications.com/"
+        
+       ></SEO>
     <Header />
     {/* Hero */}
     <section className="relative w-full min-h-[100vh] bg-black z-10 flex flex-col items-center justify-center">
@@ -216,6 +226,7 @@ export default function Home() {
             <GradientButton 
             onClick={openPopup}
             />
+            <SecondaryButton/>
             
           </motion.div>
         </motion.div>
@@ -243,7 +254,7 @@ export default function Home() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
-              className='bg-[#171E4B] w-full py-2 mb-4 origin-left'
+              className='bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] w-full py-2 mb-4 origin-left'
             >
               <p className="max-w-2xl text-white text-[14px] text-center leading-tight px-4">
                 Start your journey with expert support and unbeatable savings.
@@ -307,7 +318,7 @@ export default function Home() {
                 variants={itemVariants}
                 className='flex flex-row gap-3 items-center justify-start'
               >
-                <div className='flex-shrink-0 w-6 h-6 bg-[#171E4B] rounded-full flex items-center justify-center'>
+                <div className='flex-shrink-0 w-6 h-6 bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] rounded-full flex items-center justify-center'>
                   <ChevronRightIcon className='w-4 h-4 text-white' />
                 </div>
                 <p className="text-black/80 text-[18px]"> 
@@ -332,7 +343,7 @@ export default function Home() {
     </section>
     {/* Logo Marquee */}
     <motion.div 
-          className='relative w-full bg-[#171E4B] '
+          className='relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] '
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -393,7 +404,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         </div>
     </section>
     {/* CTA */}
-    <section className="relative w-full bg-[#171E4B] my-20 z-10">
+    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] my-20 z-10">
       {/* Animated Bird Image */}
           <img src='images/1.gif' alt=" Publishing" className='hidden md:flex absolute left-0 bottom-0 w-[350px] h-auto rounded-[20px]' />
           <img src='images/2.gif' alt="Publishing" className='hidden md:flex absolute -right-15 -bottom-4 w-[350px] h-auto rounded-[20px]' />
@@ -481,7 +492,7 @@ No need to worry about the “next step” as our experts are here to guide you 
         </div>
     </section>
     {/* CTA 2 */}
-    <section className="relative w-full bg-[#171E4B] my-20 z-10">
+    <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] my-20 z-10">
       {/* Animated Bird Image */}
 
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:gap-16 items-center justify-between px-4 md:px-8 relative ">

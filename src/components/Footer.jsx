@@ -31,7 +31,7 @@ const imageVariants = {
   return (
     <>
   
-    <footer className="w-full  bg-[#171E4B] pt-8 pb-2 px-4 md:px-8 border-t border-gray-100">
+    <footer className="w-full  bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] pt-8 pb-2 px-4 md:px-8 border-t border-gray-100">
       <div className="max-w-[1600px] mx-auto">
         <div className="flex flex-col md:flex-row gap-12 mb-4 justify-between">
           
@@ -75,25 +75,26 @@ const imageVariants = {
           <div className='md:w-[30%]'>
             <h3 className="text-xl font-semibold text-white mb-6">Our Services</h3>
             <ul className="flex flex-col gap-4">
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[16px]">
+              <Link to="/publishing-and-distribution" className="text-white/80 hover:text-white transition-colors text-[16px]">
                 Publishing & Distribution
               </Link>
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[16px]">
-                Editing & Proofreading
-              </Link>
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[16px]">
-                Cover Design & Illustrations
-              </Link>
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[16px]">
+               <Link to="/ghostwriting-&-manuscript" className="text-white/80 hover:text-white transition-colors text-[16px]">
                 Ghostwriting & Manuscript
               </Link>
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[16px]">
+              <Link to="/editing-&-proofreading" className="text-white/80 hover:text-white transition-colors text-[16px]">
+                Editing & Proofreading
+              </Link>
+              <Link to="/coverdesign-&-Illustrations" className="text-white/80 hover:text-white transition-colors text-[16px]">
+                Cover Design & Illustrations
+              </Link>
+             
+              <Link to="/marketing-&-campaigns" className="text-white/80 hover:text-white transition-colors text-[16px]">
                 Marketing & PR Campaigns
               </Link>
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[16px]">
+              <Link to="/audiobook" className="text-white/80 hover:text-white transition-colors text-[16px]">
                 Audio Book
               </Link>
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[16px]">
+              <Link to="/time-square-event" className="text-white/80 hover:text-white transition-colors text-[16px]">
                 Time Square Event
               </Link>
             </ul>
@@ -128,13 +129,13 @@ const imageVariants = {
           </p>
           <div className="flex gap-6">
              <ul className="flex flex-row gap-4">
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[14px]">
+              <Link to="/terms-and-conditions" className="text-white/80 hover:text-white transition-colors text-[14px]">
                 Terms & Conditions 
               </Link>
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[14px]">
+              <Link to="/privacy-policy" className="text-white/80 hover:text-white transition-colors text-[14px]">
                 Privacy Policy
               </Link>
-              <Link to="/" className="text-white/80 hover:text-white transition-colors text-[14px]">
+              <Link to="/refund-policy" className="text-white/80 hover:text-white transition-colors text-[14px]">
                 Refund Policy
               </Link>
              

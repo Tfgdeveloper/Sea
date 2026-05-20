@@ -100,7 +100,7 @@ const tabsData = [
   },
 ];
 
-const TabsSection = () => {
+const TabsSectionlp = () => {
   const [activeTab, setActiveTab] = useState(1);
   const scrollRef = useRef(null);
 
@@ -165,8 +165,8 @@ const TabsSection = () => {
                 [scroll-snap-align:center] md:[scroll-snap-align:none]
                 ${
                   activeTab === tab.id
-                    ? "bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] text-white"
-                    : "bg-transparent text-black"
+                    ? "bg-[#171D4B] text-white"
+                    : "bg-transparent text-[#171D4B] border border-[#171D4B]"
                 }
               `}
             >
@@ -207,4 +207,4 @@ const TabsSection = () => {
   );
 };
 
-export default TabsSection;
+export default TabsSectionlp;

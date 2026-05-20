@@ -11,13 +11,14 @@ const menuItems = [
   {
     label: "Services",
     children: [
-      { label: "Publishing & Distribution", href: "/services/editing" },
-      { label: "Editing & Proofreading", href: "/services/publishing" },
-      { label: "Cover Design & Illustrations", href: "/services/distribution" },
-      { label: "Ghostwriting & Manuscript", href: "/services/editing" },
-      { label: "Marketing & PR Campaigns", href: "/services/publishing" },
-      { label: "Audio Book", href: "/services/distribution" },
-      { label: "Time Square Event", href: "/services/distribution" },
+      { label: "Publishing & Distribution", href: "/publishing-and-distribution" },
+      { label: "Ghostwriting & Manuscript", href: "/ghostwriting-&-manuscript" },
+      { label: "Editing & Proofreading", href: "/editing-&-proofreading" },
+      { label: "Cover Design & Illustrations", href: "/coverdesign-&-Illustrations" },
+      
+      { label: "Marketing & PR Campaigns", href: "/marketing-&-campaigns" },
+      { label: "Audio Book", href: "/audiobook" },
+      { label: "Time Square Event", href: "/time-square-event" },
     ],
   },
   { label: "Portfolio", href: "/portfolio" },

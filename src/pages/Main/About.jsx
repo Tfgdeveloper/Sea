@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Header from '../components/Header'
-import Footer from '../components/Footer';
-import Popup from '../components/Popup';
-import GradientButton from '../UI/GradientButton'
-import { SecondaryButton } from '../UI/SecondaryButton'
-import ScrollReveal from "../UI/ScrollReveal";
-import ImageMarquee from "../components/ImageMarquee";
-import CountUp from "../UI/CountUp";
-import Card from "../UI/Card";
-import TestimonialSection from "../components/TestimonialSection";
+import Header from '../../components/Header'
+import Footer from '../../components/Footer';
+import Popup from '../../components/Popup';
+import GradientButton from '../../UI/GradientButton'
+import { SecondaryButton } from '../../UI/SecondaryButton'
+import ScrollReveal from "../../UI/ScrollReveal";
+import ImageMarquee from "../../components/ImageMarquee";
+import CountUp from "../../UI/CountUp";
+import Card from "../../UI/Card";
+import TestimonialSection from "../../components/TestimonialSection";
+import SEO from "../../components/SEO";
 
 
 const fadeInUp = {
@@ -89,22 +90,22 @@ const slideInRight = {
 
 const Chooseus = [
   {
-    image: "images/Publishing-&-Distribution.gif",
+    image: "images/work.gif",
     title: "Quality Work",
     
   },
   {
-    image: "images/Ghostwriting-&-Manuscript.gif",
+    image: "images/Product delivery in time.gif",
     title: "Timely Delivery",
     
   },
   {
-    image: "images/Cover-Design-&-Illustration.gif",
+    image: "images/customer.gif",
     title: "Customer Satisfaction",
     
   },
   {
-    image: "images/Audiobook.gif",
+    image: "images/ownership.gif",
     title: "100% Ownership",
     
   },
@@ -117,6 +118,13 @@ const About = () => {
     const closePopup = () => setIsPopupOpen(false);
   return (
     <div>
+      <SEO
+        title="About Seawings Publications | Your Publishing Partner" 
+        description="Learn about Seawings Publications, a trusted partner offering editing, design, publishing, and global book distribution for authors worldwide."
+        keyword="about Seawings Publications"
+        link="https://www.seawingspublications.com/about"
+        
+       ></SEO>
         <Header />
         {/* Hero */}
         <section className="relative w-full min-h-[100vh] md:min-h-[80vh] bg-black z-10 flex flex-col items-center justify-center">
@@ -234,7 +242,7 @@ const About = () => {
               <ImageMarquee/>
         </motion.div>
         {/* CTA */}
-        <section className="relative w-full bg-[#171E4B] z-10">
+        <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] z-10">
               {/* Animated Bird Image */}
         
               <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:gap-16 items-center justify-between px-4 md:px-8 relative ">

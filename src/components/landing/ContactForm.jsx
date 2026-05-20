@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
-const ContactForm = () => {
+const ContactFormlp = () => {
   const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
     // State to hold form input values
@@ -84,7 +84,9 @@ const ContactForm = () => {
   placeholder="Enter Your Name"
  
   title="Please enter your full name (first and last name, letters only)"
-  className="w-full rounded-[20px] border border-[#13B3D3]/40 bg-[#13B3D3]/5 p-3 backdrop-blur-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] focus:border-[#13B3D3] focus:outline-none focus:ring-1 focus:ring-[#13B3D3]"
+  className="w-full bg-white/0 border rounded-3xl border-black px-3 py-2
+                                placeholder:text-black text-black appearance-none
+                                focus:outline-none "
       />
 
           <input
@@ -97,7 +99,9 @@ const ContactForm = () => {
  
   title="Enter a valid US number in this format: +1 123 456 7890"
   
-  className="w-full rounded-[20px] border border-[#13B3D3]/40 bg-[#13B3D3]/5 p-3 backdrop-blur-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] focus:border-[#13B3D3] focus:outline-none focus:ring-1 focus:ring-[#13B3D3]"
+  className="w-full bg-white/0 border rounded-3xl border-black px-3 py-2
+                                placeholder:text-black text-black appearance-none
+                                focus:outline-none "
       />
      
       <input
@@ -110,7 +114,9 @@ const ContactForm = () => {
   placeholder="Enter Your Email"
   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
   title="Please enter a valid email address"
-  className="w-full rounded-[20px] border border-[#13B3D3]/40 bg-[#13B3D3]/5 p-3 backdrop-blur-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] focus:border-[#13B3D3] focus:outline-none focus:ring-1 focus:ring-[#13B3D3]"
+  className="w-full bg-white/0 border rounded-3xl border-black px-3 py-2
+                                placeholder:text-black text-black appearance-none
+                                focus:outline-none "
       />
 
     
@@ -127,12 +133,14 @@ const ContactForm = () => {
   placeholder="Tell us about your book project"
   pattern=".{10,}"
   title="Please enter at least 10 characters"
-  className="w-full rounded-[20px] border border-[#13B3D3]/40 bg-[#13B3D3]/5 p-3 backdrop-blur-xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] focus:border-[#13B3D3] focus:outline-none focus:ring-1 focus:ring-[#13B3D3]"
+  className="w-full bg-white/0 border rounded-3xl border-black px-3 py-2
+                                placeholder:text-black text-black appearance-none
+                                focus:outline-none "
       />
 
       <button
         type="submit"
-        className="w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] text-white hover:scale-110 font-bold py-3 px-8 rounded-full transition-scale duration-200 whitespace-nowrap"
+        className="w-full bg-[#171D4B] text-white hover:scale-110 font-bold py-3 px-8 rounded-full transition-scale duration-200 whitespace-nowrap"
       disabled={isLoading} // Disable the button when loading
 >
   {isLoading ? "Sending..." : "Send"} {/* Display loading text */}
@@ -142,4 +150,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactFormlp;

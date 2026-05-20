@@ -103,8 +103,8 @@
   transform: scale(1.02);
 }
 
-.,
-. * {
+.gradient-text,
+.gradient-text * {
   background: linear-gradient(
     135deg,
     #13B3D3 0%,

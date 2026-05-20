@@ -42,7 +42,7 @@ const TestimonialSection = () => {
       <div className="max-w-5xl w-full px-4 relative">
         
         {/* Main Blue Card */}
-        <div className="relative  bg-[#171E4B] rounded-[2.5rem] p-10 md:p-20 shadow-2xl text-center min-h-[400px] flex flex-col justify-center items-center ">
+        <div className="relative  bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)] rounded-[2.5rem] p-10 md:p-20 shadow-2xl text-center min-h-[400px] flex flex-col justify-center items-center ">
           
           {/* Background Watermark */}
           <div className="absolute inset-0 -bottom-90 flex items-center justify-center opacity-10 pointer-events-none select-none">

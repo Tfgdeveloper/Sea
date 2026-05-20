@@ -5,6 +5,7 @@ import React from "react";
 const Card = ({
   image,
   title,
+  text,
 
 }) => {
   return (
@@ -26,6 +27,9 @@ const Card = ({
           <h3 className="text-[22px] font-semibold leading-tight text-[#171717] text-center">
             {title}
           </h3>
+          <p className="text-black/80 text-[18px] text-center mx-auto">
+            {text}
+          </p>
 
           
         </div>
