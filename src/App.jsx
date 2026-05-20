@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Home from './pages/main/Home'
 import { BrowserRouter, Routes, Route } from "react-router";
 import About from './pages/main/About';
@@ -19,9 +19,12 @@ import { LiveChatWidget } from "@livechat/widget-react";
 import ScrollToTop from './components/Scrollontop';
 import Thankyou from "./pages/others/Thankyou";
 import PublishingSolution from "./pages/lp/PublishingSolution";
+import Popup from "./components/Popup";
+import PopupManager from "./components/PopupManager";
 
 
 function App() {
+
   useEffect(() => {
     const setupLiveChatAutoPopup = () => {
       if (window.LiveChatWidget) {
@@ -43,7 +46,9 @@ function App() {
 
 
   return (
+    <>
     <BrowserRouter>
+    <PopupManager />
     <ScrollToTop />
       
       <LiveChatWidget license="19067595" />
@@ -70,7 +75,10 @@ function App() {
         <Route path="/publishings-solutions" element={<PublishingSolution/>} />
       
       </Routes>
+      
     </BrowserRouter>
+    
+    </>
   ) }
 
 export default App;
