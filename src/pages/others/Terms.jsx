@@ -51,7 +51,9 @@ const Terms = () => {
       {/* Hero */}
         <section className="relative w-full min-h-[80vh] md:min-h-[60vh] bg-black z-10 flex flex-col items-center justify-center">
                 <motion.img 
+
                 src='images/bird1.webp' 
+                alt="bird"
                 className='z-50 absolute right-0 -bottom-22 w-32 md:w-40'
                 variants={birdVariants}
                 initial="hidden"
@@ -60,6 +62,7 @@ const Terms = () => {
               />
               <motion.img 
                 src='images/bird2.webp' 
+                alt="bird"
                 className='z-50 absolute left-0 -bottom-0 w-32 md:w-40'
                 variants={birdVariants}
                 initial="hidden"
@@ -70,6 +73,7 @@ const Terms = () => {
               <motion.img
                 
                 src="/images/hero.webp"
+                alt="bg"
                 className="absolute inset-0 w-full h-full object-cover z-0"
               />
               

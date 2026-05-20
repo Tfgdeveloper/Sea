@@ -51,7 +51,7 @@ export default function ImageCarousel() {
             onMouseEnter={e => (e.currentTarget.style.transform = "translateY(-18px) scale(1.06)")}
             onMouseLeave={e => (e.currentTarget.style.transform = "none")}
           >
-            <img src={c.src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <img src={c.src} alt="logos" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 13, background: "rgba(0,0,0,0.28)", borderRadius: "3px 0 0 3px" }} />
             <div style={{ position: "absolute", left: 13, top: 0, width: 28, height: "100%", background: "linear-gradient(90deg,rgba(255,255,255,0.18),transparent)", pointerEvents: "none" }} />
           </div>

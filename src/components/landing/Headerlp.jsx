@@ -30,7 +30,7 @@ export default function Headerlp() {
             className="flex items-center"
             style={{ textDecoration: "none" }}
           >
-            <img src="images/logoblue.webp" className="w-[250px] "/>
+            <img src="images/logoblue.webp" alt="logo" className="w-[250px] "/>
           </Link>
 
 

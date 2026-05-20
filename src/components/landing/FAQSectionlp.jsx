@@ -113,7 +113,7 @@ const FAQSectionlp = () => {
         >
           <p className="text-gray-600">
             Still have questions? {" "}
-            <Link to="" className="font-bold text-[#171E4B] hover:underline">
+            <Link to="tel:+17372201691" className="font-bold text-[#171E4B] hover:underline">
               Contact our flight crew today.
             </Link>
           </p>

@@ -257,10 +257,10 @@ export default function PublishingSolution() {
             &nbsp; Rating on
             </span>          </div>
           <div class="hidden md:flex flex-row gap-[20px] mt-8 mx-6 items-center">
-            <img src="images/logos/trustpilot.svg" class="h-[25px] md:h-[35px] w-auto"/>
-            <img src="images/logos/bark.webp" class="h-[15px] md:h-[25px] w-auto"/>
-            <img src="images/logos/good.webp" class="h-[35px] md:h-[50px] w-auto"/>
-            <img src="images/logos/clutch.webp" class="h-[25px] md:h-[35px] w-auto"/>
+            <img src="images/logos/trustpilot.svg" alt="logo" class="h-[25px] md:h-[35px] w-auto"/>
+            <img src="images/logos/bark.webp" alt="logo" class="h-[15px] md:h-[25px] w-auto"/>
+            <img src="images/logos/good.webp" alt="logo" class="h-[35px] md:h-[50px] w-auto"/>
+            <img src="images/logos/clutch.webp" alt="logo" class="h-[25px] md:h-[35px] w-auto"/>
           </div>
         
         </motion.div>
@@ -507,9 +507,9 @@ export default function PublishingSolution() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src="images/books/35.png" class="w-[125px] md:w-[200px] rounded-md "/>
-          <img src="images/books/47.png" class="w-[175px] md:w-[250px] -mx-8 rounded-md z-20"/>
-          <img src="images/books/60.png" class="w-[125px] md:w-[200px] rounded-md"/>
+          <img src="images/books/35.webp" alt="books" class="w-[125px] md:w-[200px] rounded-md "/>
+          <img src="images/books/47.webp" alt="books" class="w-[175px] md:w-[250px] -mx-8 rounded-md z-20"/>
+          <img src="images/books/60.webp" alt="books" class="w-[125px] md:w-[200px] rounded-md"/>
 
         </motion.div>
       </div>
@@ -724,7 +724,7 @@ export default function PublishingSolution() {
 
           </div>
           <div class="hidden md:inline-flex w-1/4 ">
-          <img src="images/books/28.png" class="h-full"/>
+          <img src="images/books/28.webp" alt="books" class="h-full"/>
 
         </div>
           </div>

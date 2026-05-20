@@ -8,35 +8,35 @@ const TESTIMONIALS = [
     name: "Penn Wryder",
     quote: "I wasn't sure how my story would translate visually, but the illustration service really brought it to life in a way I didn't expect. The artwork felt thoughtful and true to the tone of my book.",
     image: "images/Penn-Wryder.png",
-    book: "images/books/47.png", // Placeholder for demo
+    book: "images/books/47.webp", // Placeholder for demo
   },
   {
     id: 2,
     name: "Jeffrey Carswell",
     quote: "Publishing my book became simple and organized. The whole process felt smooth and stress-free with proper guidance.",
     image: "images/Jeffrey.png",
-    book: "images/books/60.png",
+    book: "images/books/60.webp",
   },
   {
     id: 3,
     name: "Edina Kiss",
     quote: "The editing and proofreading service improved my manuscript flow while keeping my original voice intact.",
     image: "images/Edina.png",
-    book: "images/books/55.png",
+    book: "images/books/55.webp",
   },
   {
     id: 4,
     name: "Riley Lazard",
     quote: "I wasn't sure how my story would translate visually, but the illustration service really brought it to life in a way I didn't expect. The artwork felt thoughtful and true to the tone of my book.",
     image: "images/Riley.png",
-    book: "images/books/35.png", // Placeholder for demo
+    book: "images/books/35.webp", // Placeholder for demo
   },
   {
     id: 5,
     name: "Cassie Wright",
     quote: "Publishing my book became simple and organized. The whole process felt smooth and stress-free with proper guidance.",
     image: "images/Cassie.png",
-    book: "images/books/39.png",
+    book: "images/books/39.webp",
   },
 ];
 

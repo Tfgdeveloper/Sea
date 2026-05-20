@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Header from '../../components/Header'
 import Footer from '../../components/Footer';
@@ -147,6 +147,16 @@ const Portfolio = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const openPopup = () => setIsPopupOpen(true);
     const closePopup = () => setIsPopupOpen(false);
+        const [gifLoaded, setGifLoaded] = useState(false);
+    const ref = useRef();
+    
+    useEffect(() => {
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) setGifLoaded(true);
+      });
+      observer.observe(ref.current);
+      return () => observer.disconnect();
+    }, []);
   return (
     <div>
       <SEO
@@ -161,6 +171,7 @@ const Portfolio = () => {
         <section className="relative w-full min-h-[100vh] md:min-h-[80vh] bg-black z-10 flex flex-col items-center justify-center">
                 <motion.img 
                 src='images/bird1.webp' 
+                alt="bird"
                 className='z-50 absolute right-0 -bottom-22 w-32 md:w-40'
                 variants={birdVariants}
                 initial="hidden"
@@ -169,6 +180,7 @@ const Portfolio = () => {
               />
               <motion.img 
                 src='images/bird2.webp' 
+                alt="bird"
                 className='z-50 absolute left-0 -bottom-0 w-32 md:w-40'
                 variants={birdVariants}
                 initial="hidden"
@@ -179,6 +191,7 @@ const Portfolio = () => {
               <motion.img
                 
                 src="/images/hero.webp"
+                alt="bg"
                 className="absolute inset-0 w-full h-full object-cover z-0"
               />
               
@@ -269,9 +282,12 @@ const Portfolio = () => {
         {/* CTA */}
         <section className="relative w-full bg-[linear-gradient(135deg,#13B3D3_0%,#171E4B_100%)]  z-10">
             {/* Animated Bird Image */}
-                <img src='images/1.gif' alt=" Publishing" className='hidden md:flex absolute left-0 bottom-0 w-[350px] h-auto rounded-[20px]' />
-                <img src='images/2.gif' alt="Publishing" className='hidden md:flex absolute -right-15 -bottom-4 w-[350px] h-auto rounded-[20px]' />
-        
+                <div ref={ref}>
+        {gifLoaded && <img src="/images/1.gif" alt="gif" className='hidden md:flex absolute left-0 bottom-0 w-[350px] h-auto rounded-[20px]'  />}
+      </div>
+      <div ref={ref}>
+        {gifLoaded && <img src="/images/2.gif" alt="gif" className='hidden md:flex absolute -right-15 -bottom-4 w-[350px] h-auto rounded-[20px]'  />}
+      </div>
             <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row gap-16 items-center justify-center px-4 md:px-8 py-10 relative">
                 {/* Right Side Content */}
                 

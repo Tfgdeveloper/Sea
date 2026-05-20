@@ -112,6 +112,7 @@ const Contact = () => {
         <section className="relative w-full min-h-[100vh] md:min-h-[80vh] bg-black z-10 flex flex-col items-center justify-center">
                 <motion.img 
                 src='images/bird1.webp' 
+                alt="bg"
                 className='z-50 absolute right-0 -bottom-15 md:-bottom-22 w-32 md:w-40'
                 variants={birdVariants}
                 initial="hidden"
@@ -120,6 +121,7 @@ const Contact = () => {
               />
               <motion.img 
                 src='images/bird2.webp' 
+                alt="bird"
                 className='z-50 absolute left-0 -bottom-0 w-32 md:w-40'
                 variants={birdVariants}
                 initial="hidden"
@@ -128,7 +130,7 @@ const Contact = () => {
               />
               {/* Background Video - Fade in slowly */}
               <motion.img
-                
+                alt="bg"
                 src="/images/hero.webp"
                 className="absolute inset-0 w-full h-full object-cover z-0"
               />

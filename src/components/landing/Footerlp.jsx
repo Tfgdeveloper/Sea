@@ -29,7 +29,7 @@ const Footerlp = () => {
   return (
     <>
     <section class="bg-white">
-    <img src="images/footer-bg.png" class=""/>
+    <img src="images/footer-bg.png" alt="bg" class=""/>
   </section>
     <footer className="w-full  bg-[#051D38] px-4 md:px-8 pb-2">
       <div className="max-w-[1600px] flex flex-col mx-auto">
@@ -59,7 +59,7 @@ const Footerlp = () => {
           
           {/* Column 1: Branding */}
           <div className="md:w-[30%] flex flex-col gap-6">
-            <img src='images/logowhite.png' className='w-[250px]'/>
+            <img src='images/logowhite.png' alt="logo" className='w-[250px]'/>
             <p className="text-white text-[16px] leading-relaxed max-w-sm">
               We support you at every stage of your journey, from the first draft to selling your book. Join us, and let's create your success story together.
             </p>

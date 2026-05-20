@@ -37,7 +37,7 @@ const imageVariants = {
           
           {/* Column 1: Branding */}
           <div className="md:w-[30%] flex flex-col gap-6">
-            <img src='images/logowhite.png' className='w-[250px]'/>
+            <img src='images/logowhite.png' alt="logo" className='w-[250px]'/>
             <p className="text-white text-[16px] leading-relaxed max-w-sm">
               We support you at every stage of your journey, from the first draft to selling your book. Join us, and let's create your success story together.
             </p>
