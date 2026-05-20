@@ -74,7 +74,7 @@ export default function Header() {
       >
         <div className="max-w-[1600px] mx-auto flex items-center justify-between h-16 px-4 md:px-8 py-2 mt-3">
 
-          {/* Logo */}
+          
           <Link
             to="/"
             className="flex items-center"
