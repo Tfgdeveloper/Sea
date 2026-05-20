@@ -1,10 +1,7 @@
 import React, { useEffect} from "react";
-import Home from './pages/main/Home'
+
 import { BrowserRouter, Routes, Route } from "react-router";
-import About from './pages/main/About';
-import Services from './pages/main/Services';
-import Portfolio from './pages/main/Portfolio';
-import Contact from './pages/main/Contact';
+
 import Publishing from './pages/services/Publishing';
 import Ghostwriting from './pages/services/Ghostwriting';
 import Editing from './pages/services/Editing';
@@ -21,6 +18,11 @@ import Thankyou from "./pages/others/Thankyou";
 import PublishingSolution from "./pages/lp/PublishingSolution";
 import Popup from "./components/Popup";
 import PopupManager from "./components/PopupManager";
+import Home from "./pages/mainpages/Home";
+import About from "./pages/mainpages/About";
+import Services from "./pages/mainpages/Services";
+import Portfolio from "./pages/mainpages/Portfolio";
+import Contact from "./pages/mainpages/Contact";
 
 
 function App() {
