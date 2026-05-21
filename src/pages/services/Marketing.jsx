@@ -274,7 +274,7 @@ export default function Marketing() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src='images/marketing.png' alt="Publishing" className='w-[85%] h-auto rounded-3xl' />
+          <img src='images/marketing.webp' alt="Publishing" className='w-[85%] h-auto rounded-3xl' />
         </motion.div>
 
         {/* Right Side Content */}

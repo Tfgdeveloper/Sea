@@ -274,7 +274,7 @@ export default function Publishing() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src='images/publishing.png' alt="Publishing" className='w-full h-auto rounded-3xl w-[80%]' />
+          <img src='images/publishing.webp' alt="Publishing" className='w-full h-auto rounded-3xl w-[80%]' />
         </motion.div>
 
         {/* Right Side Content */}

@@ -80,7 +80,7 @@ export default function Header() {
             className="flex items-center"
             style={{ textDecoration: "none" }}
           >
-            <img src="images/logo2.png" alt="logo" className="w-[250px] "/>
+            <img src="images/Seawings Publications Logo.png" alt="logo" className="w-[250px] "/>
           </Link>
 
           {/* Desktop Menu */}

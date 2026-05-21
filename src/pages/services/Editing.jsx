@@ -274,7 +274,7 @@ export default function Editing() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src='images/editing.png' alt="Publishing" className='w-full h-auto rounded-3xl' />
+          <img src='images/editing.webp' alt="Publishing" className='w-full h-auto rounded-3xl' />
         </motion.div>
 
         {/* Right Side Content */}

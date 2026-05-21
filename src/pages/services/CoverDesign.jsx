@@ -273,7 +273,7 @@ Your book’s first impression should capture hearts. Our creative team designs 
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src='images/bookcover.png' alt="Publishing" className='w-full h-auto rounded-3xl' />
+          <img src='images/bookcover.webp' alt="Publishing" className='w-full h-auto rounded-3xl' />
         </motion.div>
 
         {/* Right Side Content */}

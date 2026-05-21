@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import ScrollToTop from './components/Scrollontop';
 import PopupManager from "./components/PopupManager";
 import { LiveChatWidget } from "@livechat/widget-react";
+import Badges from "./components/Badges";
 
 // ✅ Only these 3 are eagerly loaded — they are small utility components
 // Everything else loads only when the user visits that route
@@ -84,6 +85,7 @@ function App() {
     <BrowserRouter>
       <PopupManager />
       <ScrollToTop />
+      <Badges/>
       <LiveChatWidget license="19067595" />
 
       {/* Suspense wraps all routes — shows PageLoader while any chunk downloads */}
@@ -111,6 +113,7 @@ function App() {
           <Route path="/publishings-solutions" element={<PublishingSolution />} />
         </Routes>
       </Suspense>
+      
     </BrowserRouter>
   );
 }

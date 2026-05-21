@@ -62,14 +62,14 @@ const listItems2 = [
 
   const services = [
   {
-    image: "images/publishing.png",
+    image: "images/publishing.webp",
     title: "Publishing & Distribution",
     description: "Simplify the publishing process and make your book available through trusted platforms for global and local reach.",
     buttonText: "Explore Service",
     link: "/publishing-and-distribution",
   },
   {
-    image: "images/ghostwriting.png",
+    image: "images/ghostwriting.webp",
     title: "Ghostwriting & Manuscript",
     description: "Collaborate with skilled writers who can help you shape, refine, or complete your manuscript while you have the creative control.",
     buttonText: "Explore Service",
@@ -77,14 +77,14 @@ const listItems2 = [
   },
   
   {
-    image: "images/editing.png",
+    image: "images/editing.webp",
     title: "Editing & Proofreading",
     description: "Ensure clarity, flow, and accuracy with professional editing and proofreading that enhance readability and polish your final draft.",
     buttonText: "Explore Service",
     link: "/editing-&-proofreading",
   },
   {
-    image: "images/bookcover.png",
+    image: "images/bookcover.webp",
     title: "Cover Design & Illustrations",
     description: "Get visually striking covers and illustrations crafted to complement your genre, tone, and audience appeal.",
     buttonText: "Explore Service",
@@ -92,21 +92,21 @@ const listItems2 = [
   },
   
   {
-    image: "images/marketing.png",
+    image: "images/marketing.webp",
     title: "Marketing & PR Campaigns",
     description: "Build awareness through strategic campaigns that help connect your book with its ideal readers across multiple channels.",
     buttonText: "Explore Service",
     link: "/marketing-&-campaigns",
   },
   {
-    image: "images/audio.png",
+    image: "images/audio.webp",
     title: "Audio Book Publsihing",
     description: "Turn your story into immersive audio formats that engage listeners and expand your audience across popular platforms.",
     buttonText: "Explore Service",
     link: "/audiobook",
   },
   {
-    image: "images/times.png",
+    image: "images/times.webp",
     title: "Time Square Event",
     description: "Showcase your book in Times Square with bold promotions that create buzz and attract a wider audience fast.",
     buttonText: "Explore Service",

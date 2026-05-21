@@ -273,7 +273,7 @@ Bring your words to life through sound. Seawings Publications delivers studio-qu
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src='images/audio.png' alt="Publishing" className='w-[85%] h-auto rounded-3xl' />
+          <img src='images/audio.webp' alt="Publishing" className='w-[85%] h-auto rounded-3xl' />
         </motion.div>
 
         {/* Right Side Content */}
