@@ -143,3 +143,17 @@
     transform: scale(1);
   }
 }
+
+
+.gradient-text2 {
+  background: linear-gradient(to right, #A991FE, #6958F0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+.gradient-text2 svg,
+.gradient-text2 {
+  stroke: url(#gradient);
+}

@@ -4,6 +4,7 @@ import Popup from './Popup';
 import { Link } from "react-router";
 import GradientButton from "../UI/GradientButton";
 import { SecondaryButton } from "../UI/SecondaryButton";
+import { Facebook, Instagram, InstagramIcon, LucideInstagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -45,6 +46,45 @@ const imageVariants = {
               <button onClick={openPopup}  className="bg-white text-[#171E4B] px-8 py-3 rounded-full font-bold shadow-lg hover:opacity-90 transition-all active:scale-95">
                <span className=' '>Schedule Consultation</span> 
               </button>
+              <div className="flex flex-row gap-2 mt-4 ">
+                <a href="https://www.facebook.com/seawingspublications" target="_blank" rel="noopener noreferrer" className="w-auto bg-white p-2 rounded-full">
+                  <svg width="0" height="0">
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#13B3D3" />
+                      <stop offset="100%" stopColor="#171E4B" />
+                    </linearGradient>
+                  </defs>
+                  </svg>
+
+                <Facebook
+                  className="w-6 h-6"
+                  style={{
+                    stroke: "url(#gradient)"
+                  }}
+                />
+                </a>
+                <a href="https://www.instagram.com/seawings.publications/" target="_blank" rel="noopener noreferrer" className="w-auto bg-white p-2 rounded-full">
+                  <svg width="0" height="0">
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#13B3D3" />
+                      <stop offset="100%" stopColor="#171E4B" />
+                    </linearGradient>
+                  </defs>
+                  </svg>
+
+                <LucideInstagram
+                  className="w-6 h-6"
+                  style={{
+                    stroke: "url(#gradient)"
+                  }}
+                />
+                </a>
+                
+                
+                
+              </div>
             </div>
             
           </div>
